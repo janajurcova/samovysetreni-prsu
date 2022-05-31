@@ -1,4 +1,4 @@
-# Ignore the package-lock.json to prevent conflicts when collaborating
+t add# Ignore the package-lock.json to prevent conflicts when collaborating
 
 package-lock.json
 
