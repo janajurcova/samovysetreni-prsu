@@ -29,7 +29,13 @@ body,
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
 
+body {
+  background-image: url(./img/COVER-opacity.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
 html {
@@ -37,3 +43,12 @@ html {
    font-family: 'Quicksand', sans-serif;
 }
 
+main {
+  display:flex;
+  justify-content: space-evenly;
+  
+}
+
+h1 {
+  color: #ee2a7b;
+}

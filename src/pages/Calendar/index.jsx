@@ -2,8 +2,8 @@ import React from 'react';
 
 export const Calendar = () => {
     return (
-        <main>
-            <h2>Kalendář</h2>
+        <main style={{ padding: '1rem' }}>
+            <h1>Kalendář</h1>
         </main>
     );
 };

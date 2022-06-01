@@ -9,8 +9,8 @@ import './style.css';
 import { BrowserRouter, Routes, Route, Link, Outlet } from 'react-router-dom';
 
 const App = () => (
-  <div>
-  </div>
+  <body>
+  </body>
 )
 
 

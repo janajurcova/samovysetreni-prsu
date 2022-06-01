@@ -4,7 +4,7 @@ import { Link, Outlet } from 'react-router-dom';
 
 export const Header = () => (
     <header className="page-header">
-        <div className="container">
+        <div className="container" style={{ display: 'flex' }}>
             <div className="logo" src="./img/Blogo-transparent.png">
             <div class="theme-switch-wrapper">
                 <span>gender mode</span>
@@ -12,16 +12,21 @@ export const Header = () => (
                     <input type="checkbox" id="checkbox" />
                     <div class="slider round"></div>
                 </label>
-                </div>
-            </div>
+               
             <div className="navigation">
-            <nav>
-                <Link to="/samovysetreni">Jak na to(.)(.)</Link> |{' '}
-                <Link to="/kalendar">Kalendář</Link>|{' '}
-                <Link to="/codelatkdyz">Co dělat, když...</Link>|{' '}
+                <nav style={{ borderRight: 'solid 1px', padding: '1rem' }}>
+                    <Link style={{ display: "block", margin: "1rem 0" }}
+                to="/samovysetreni">Jak na to(.)(.)</Link> <br/> {' '}
+                    <Link style={{ display: "block", margin: "1rem 0" }}
+                to="/kalendar">Kalendář</Link> <br/> {' '}
+                    <Link style={{ display: "block", margin: "1rem 0" }}
+                to="/codelatkdyz">Co dělat, když...</Link>{' '}
             </nav>
             </div>
+             </div>
+            </div>
             <Outlet />
+            
         </div>
     </header>
 );
