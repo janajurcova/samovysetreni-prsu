@@ -10,12 +10,6 @@ import { BrowserRouter, Routes, Route, Link, Outlet } from 'react-router-dom';
 
 const App = () => (
   <div>
-    <nav style={{ borderBottom: 'solid 1px', paddingBottom: '1rem' }}>
-      <Link to="/samovysetreni">Jak na to(.)(.)</Link> |{' '}
-      <Link to="/kalendar">Kalendář</Link>
-      <Link to="/codelatkdyz">Co dělat, když...</Link>
-    </nav>
-    <Outlet />
   </div>
 )
 
