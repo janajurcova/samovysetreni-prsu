@@ -39,8 +39,8 @@ body {
 }
 
 html {
-  scroll-behavior: smooth;
-   font-family: 'Quicksand', sans-serif;
+  scroll-behavior: auto;
+  font-family: 'Quicksand', sans-serif;
 }
 
 main {
