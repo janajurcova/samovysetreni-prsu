@@ -4,6 +4,7 @@ import './style.css';
 export const Calendar = () => {
     return (
         <main style={{ padding: '1rem' }}>
+       
             <h1>Kalendář</h1>
             <div className="container1">
                 <div className="calendar">
@@ -88,7 +89,7 @@ export const Calendar = () => {
                     <h4>Nastavení diagnostického vyšetření:</h4>
                 </div>
             </div>
-
+       
         </main>
     );
 };
