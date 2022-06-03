@@ -47,27 +47,27 @@ export const Questions = () => {
                         https://www.nzip.cz/kategorie/177-rakovina-prsu</p>
                 </div>
 
-                <button class="accordion">4 - Špatné výsledky? To je nám líto.</button>
-                <div class="panel">
+                <button className="accordion">4 - Špatné výsledky? To je nám líto.</button>
+                <div className="panel">
                     <p>Začni od Amélie a socioekonomickou poradnou.
                         - socioekonom Amelie
                         https://www.amelie-zs.cz/</p>
                 </div>
 
-                <button class="accordion">5 - Nestačí to? Koukni co pro tebe může udělat Dobrý anděl.</button>
-                <div class="panel">
+                <button className="accordion">5 - Nestačí to? Koukni co pro tebe může udělat Dobrý anděl.</button>
+                <div className="panel">
                     <p> - dobrý anděl příspěvky organizace
                         https://www.dobryandel.cz/rakovina-nadace-dobry-andel-pomaha/</p>
                 </div>
 
-                <button class="accordion">6 - Zvládnout ekonomickou situaci ti pomůžou i různé dávky.</button>
-                <div class="panel">
+                <button className="accordion">6 - Zvládnout ekonomickou situaci ti pomůžou i různé dávky.</button>
+                <div className="panel">
                     <p>- ministerstvo práce a sociálních věcí
                         https://www.mpsv.cz/</p>
                 </div>
 
-                <button class="accordion">7 - Nejsi v tom sama. Nech si pomoct a mluv o tom.</button>
-                <div class="panel">
+                <button className="accordion">7 - Nejsi v tom sama. Nech si pomoct a mluv o tom.</button>
+                <div className="panel">
                     <p> - pacientské organizace - bellis, aliance žen s rakovinou prsu, avon linka,
                         https://www.bellisky.cz/ https://www.breastcancer.cz/
                         https://www.zdravaprsa.cz/avon-linka-proti-rakovine-prsu-slavi-10-let/
@@ -75,22 +75,22 @@ export const Questions = () => {
                         Avon linka poskytuje na čísle 800 546 546 zdarma od pondělí do pátku (10–18 hodin). Je určena všem, kteří potřebují poradit ohledně onemocnění a prevence rakoviny prsu. Poradenství je anonymní a poskytují jej ženy, které zvládly náročnou léčbu této nemoci.</p>
                 </div>
 
-                <button class="accordion">8 - Pomohl by ti onkopsycholog na telefonu?</button>
-                <div class="panel">
+                <button className="accordion">8 - Pomohl by ti onkopsycholog na telefonu?</button>
+                <div className="panel">
                     <p>Bývá každou středu na Avon lince.
                         - psychologická poradna Avon linka
                         Linka (na čísle 800 546 546) nabízí i psychologické poradenství, pro které je vyhrazena středa od 16 do 18 hodin. Je zaměřeno na pomoc v náročné životní situaci spojené s diagnózou onkologického onemocnění, tj. při zvládání stresu a emocí a řešení akutních psychických či vztahových problémů.
                         Dotazy je možné zasílat i e-mailem na zazdravaprsa@breastcancer.cz</p>
                 </div>
 
-                <button class="accordion">9 - Onkopsychologů je málo, ale jsou.</button>
-                <div class="panel">
+                <button className="accordion">9 - Onkopsychologů je málo, ale jsou.</button>
+                <div className="panel">
                     <p> - Onkopsycholog a kde ho najít
                         https://www.linkos.cz/pacient-a-rodina/pomoc-v-nemoci/psychologicka-pomoc/mapa-psychoonkologicke-pece/#search=1</p>
                 </div>
 
-                <button class="accordion">10 - Přihlaš se o svého průvodce. </button>
-                <div class="panel">
+                <button className="accordion">10 - Přihlaš se o svého průvodce. </button>
+                <div className="panel">
                     <p>Autorkami jsou mladé ženy, které zažily to, co ty.
                         - Nejsi na to sama - kniha
                         https://www.bellisky.cz/projekty-a-akce/kniha-nejsi-na-to-sama-pruvodce-rakovinou-prsu/

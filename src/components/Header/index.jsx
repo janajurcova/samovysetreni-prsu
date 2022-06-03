@@ -8,8 +8,8 @@ export const Header = () => (
             <div className="logo" src="./img/Blogo-transparent.png">
             <div className="theme-switch-wrapper">
                 <span>gender mode</span>
-                <label className="theme-switch" for="checkbox">
-                    <input typeName="checkbox" id="checkbox" />
+                <label className="theme-switch" htmlFor="checkbox">
+                    <input type="checkbox" id="checkbox" />
                     <div className="slider round"></div>
                 </label>
                
