@@ -60,7 +60,7 @@ table {
 .calendar {
   text-align: center;
   background-color: #f9f9f9;
-  border-radius: 12px;
+  border-radius: 7px;
   padding-left: 2rem;
   padding-bottom: 2rem;
 }
@@ -168,6 +168,6 @@ table {
   margin-bottom: 3rem;
   text-align: left;
   background-color: #f9f9f9;
-  border-radius: 12px;
+  border-radius: 7px;
   padding: 2rem;
 }
