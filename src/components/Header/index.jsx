@@ -27,5 +27,9 @@ export const Header = () => (
         Co dělat, když...
       </Link>{' '}
     </nav>
+    <div className="downloadApp">
+      Stáhnout jako
+      <button className="nav__button">App</button>
+    </div>
   </header>
 );

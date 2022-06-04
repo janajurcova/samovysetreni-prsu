@@ -1,7 +1,7 @@
 .page-header {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   padding-left: 1rem;
   padding-right: 1rem;
   margin-bottom: 1rem;
@@ -22,6 +22,18 @@
 header {
   padding: 1rem 0 1rem 0;
   height: 6rem;
+}
+.downloadApp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav__button {
+  background-color: #ee2a7b;
+  color: #fff;
+  width: 100px;
+  height: 25px;
+  border-radius: 5px;
 }
 
 /* .navigation {
