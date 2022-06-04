@@ -70,14 +70,6 @@
     margin: 3px;
 }
 
-.navigation {
-  display: flex;
-  align-items: baseline;
-  align-content: space-between;
-  justify-content: right;
-  margin-top: 10rem;
-}
-
 a {
   margin: 1rem;
   color:#373739;
