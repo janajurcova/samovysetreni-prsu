@@ -1,12 +1,15 @@
 .carousel {
   display: flex;
   max-width: 500px;
-  height: 250px;
+  height: 400px;
 }
 
 .carousel__previous,
 .carousel__next {
   flex-shrink: 0;
+  background-color: white;
+  border: none;
+  width: 40px;
 }
 
 .carousel__media {
