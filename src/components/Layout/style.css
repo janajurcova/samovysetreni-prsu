@@ -1,23 +1,20 @@
-.page-header {
+.layout {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  min-height: 100vh;
+}
+
+/* .page-header {
   padding-left: 1rem;
   padding-right: 1rem;
   margin-bottom: 1rem;
   margin-left: auto;
   margin-right: auto;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  border-right: 1px solid black;
 }
 
 .container {
-  display: flex;
-  width: 200px;
-  height: 100%;
-}
+} */
 
 header {
   padding: 1rem 0 1rem 0;
@@ -28,7 +25,6 @@ header {
   display: flex;
   align-items: baseline;
   align-content: space-between;
-  position: absolute;
   justify-content: right;
   margin-top: 10rem;
 } */
@@ -59,7 +55,11 @@ a {
   flex-wrap: wrap;
   align-content: flex-end;
 }
-
+span {
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  font-style: italic;
+}
 .theme-switch {
   display: inline-block;
   height: 28px;
