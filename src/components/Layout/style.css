@@ -26,3 +26,15 @@ header {
   flex: 1;
 }
 
+@media (max-width: 519px) {
+  .layout {
+    flex-direction: column;
+    min-width: 100vh;
+  }
+  .layout-cover {
+    background-image: none;
+  }
+  .logo {
+    height: 4rem;   
+  }
+}

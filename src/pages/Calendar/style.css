@@ -16,7 +16,7 @@
 .calendar {
   text-align: center;
   background-color: #f9f9f9;
-  border-radius: 7px;
+  border-radius: 5px;
  
 }
  
@@ -118,6 +118,6 @@
   margin-bottom: 3rem;
   text-align: left;
   background-color: #f9f9f9;
-  border-radius: 7px;
+  border-radius: 5px;
   padding: 2rem;
 }

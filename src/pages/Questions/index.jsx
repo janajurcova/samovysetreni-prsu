@@ -7,7 +7,9 @@ const Question = ({title, children}) => {
 
     return (
         <>
-            <button className={open ? "active accordion" : "accordion"} onClick={()=> setOpen(!open)}>{title}</button>
+            <button className={open ? "active accordion" : "accordion"} onClick={() => setOpen(!open)}><span>{title}</span>{open ? <i class="las la-angle-up" ></i> :
+            <i class="las la-angle-down"></i> }
+            </button>
             <div className={open ? "active panel" : "panel"}>
                 {children}
             </div>
