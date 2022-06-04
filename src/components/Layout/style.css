@@ -3,6 +3,11 @@
   min-height: 100vh;
 }
 
+.layout-cover {
+     min-height: 100vh;
+     background-image: url(../../img/cover-opacity.jpg);
+     background-size: cover;
+}
 /* .page-header {
   padding-left: 1rem;
   padding-right: 1rem;
