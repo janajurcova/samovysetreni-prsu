@@ -1,15 +1,14 @@
 .page-header {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   padding-left: 1rem;
   padding-right: 1rem;
   margin-bottom: 1rem;
   margin-left: auto;
   margin-right: auto;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+
   border-right: 1px solid black;
 }
 
@@ -36,14 +35,14 @@ header {
   border-radius: 5px;
 }
 
-/* .navigation {
+.navigation {
   display: flex;
-  align-items: baseline;
-  align-content: space-between;
-  position: absolute;
+  flex-direction: column;
+
+  align-content: space-around;
+
   justify-content: right;
-  margin-top: 10rem;
-} */
+}
 
 a {
   margin: 1rem;
@@ -60,4 +59,3 @@ a {
   background-size: contain;
   background-repeat: no-repeat;
 }
-

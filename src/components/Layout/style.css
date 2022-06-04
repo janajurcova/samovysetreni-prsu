@@ -21,6 +21,10 @@ header {
   height: 6rem;
 }
 
+main {
+  flex: 1;
+}
+
 /* .navigation {
   display: flex;
   align-items: baseline;
@@ -44,4 +48,3 @@ a {
   background-size: contain;
   background-repeat: no-repeat;
 }
-

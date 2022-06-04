@@ -14,79 +14,75 @@
 } */
 
 .home-page {
-    display: flex;
-    width: 100vw;
-    flex-direction: column;
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
 }
 
 .home-header {
-    display: flex;
-    flex-direction: row;
-    border-bottom: 1px solid;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid;
+  width: 100%;
 }
 
 .home-header__motto {
-    text-align: center;
-    flex-direction: column;
-    flex: 1; 
+  text-align: center;
+  flex-direction: column;
+  flex: 1;
 }
 .home-header__title {
-    margin: 0;
+  margin: 0;
 }
 
 .home-header__subtitle {
-    padding-left: 15rem;
-    margin: 1rem;
-    color: #ee2a7b;
+  padding-left: 15rem;
+  margin: 1rem;
+  color: #ee2a7b;
 }
 
 .homepage-main {
-     display: flex;
-     flex-direction: row;
-     height: 100vh;
-     background-image: url(../../img/cover-opacity.jpg);
-     background-size: cover;
-     align-items: center;
-     justify-content: space-around;
-
- }
-
- .homepage-main__manual,
- .homepage-main__calendar,
- .homepage-main__questions {
-     text-align: center;
- }
-
- img.icon1,
- img.icon2,
- img.icon3 {
-     border-radius: 50%;
-     width: 30%;
-     
- }
-
- img.gender {
-    height: 1rem;
-    margin: 3px;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  background-image: url(../../img/cover-opacity.jpg);
+  background-size: cover;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.navigation {
+.homepage-main__manual,
+.homepage-main__calendar,
+.homepage-main__questions {
+  text-align: center;
+}
+
+img.icon1,
+img.icon2,
+img.icon3 {
+  border-radius: 50%;
+  width: 30%;
+}
+
+img.gender {
+  height: 1rem;
+  margin: 3px;
+}
+
+/* .navigation {
   display: flex;
   align-items: baseline;
   align-content: space-between;
   justify-content: right;
   margin-top: 10rem;
-}
+} */
 
 a {
   margin: 1rem;
-  color:#373739;
+  color: #373739;
   text-decoration: none;
   text-transform: uppercase;
 }
-
-
 
 .logo {
   width: 5rem;
@@ -96,8 +92,6 @@ a {
   background-size: contain;
   background-repeat: no-repeat;
 }
-
-
 
 /* toggleSwitch */
 .theme-switch-wrapper {
@@ -109,7 +103,6 @@ a {
   align-content: flex-end;
   width: 30px;
 }
-
 
 .theme-switch {
   display: inline-block;
