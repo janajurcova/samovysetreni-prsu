@@ -8,8 +8,7 @@
   margin-left: auto;
   margin-right: auto;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+
   border-right: 1px solid black;
 }
 
@@ -23,15 +22,27 @@ header {
   padding: 1rem 0 1rem 0;
   height: 6rem;
 }
-
-/* .navigation {
+.downloadApp {
   display: flex;
-  align-items: baseline;
-  align-content: space-between;
-  position: absolute;
+  flex-direction: column;
+  align-items: center;
+}
+.nav__button {
+  background-color: #ee2a7b;
+  color: #fff;
+  width: 100px;
+  height: 25px;
+  border-radius: 5px;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+
+  align-content: space-around;
+
   justify-content: right;
-  margin-top: 10rem;
-} */
+}
 
 a {
   margin: 1rem;
@@ -48,4 +59,3 @@ a {
   background-size: contain;
   background-repeat: no-repeat;
 }
-
