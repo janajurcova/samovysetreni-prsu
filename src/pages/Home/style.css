@@ -1,0 +1,160 @@
+/* .home-header {
+  padding-right: 1rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.container {
+ display: flex;
+ border-bottom: 1px solid;
+} */
+
+.home-page {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+}
+
+.home-header {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid;
+    width: 100%;
+}
+
+.home-header__motto {
+    text-align: center;
+    flex-direction: column;
+    flex: 1; 
+}
+.home-header__title {
+}
+
+.home-header__subtitle {
+    padding-left: 15rem;
+    color: #ee2a7b;
+}
+
+.homepage-main {
+     display: flex;
+     flex-direction: row;
+     height: 100vh;
+     background-image: url(../../img/cover-opacity.jpg);
+     background-size: cover;
+     align-items: center;
+     justify-content: space-around;
+
+ }
+
+ .homepage-main__manual,
+ .homepage-main__calendar,
+ .homepage-main__questions {
+     text-align: center;
+ }
+
+ img.icon1,
+ img.icon2,
+ img.icon3 {
+     border-radius: 50%;
+     width: 30%;
+     
+ }
+
+ img.gender {
+    height: 1rem;
+    margin: 3px;
+}
+
+.navigation {
+  display: flex;
+  align-items: baseline;
+  align-content: space-between;
+  justify-content: right;
+  margin-top: 10rem;
+}
+
+a {
+  margin: 1rem;
+  color:#373739;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+
+
+.logo {
+  width: 5rem;
+  height: 5rem;
+  margin-left: 1rem;
+  background-image: url('../../img/Blogo-transparent.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+
+/* toggleSwitch */
+.theme-switch-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  width: 30px;
+}
+
+
+.theme-switch {
+  display: inline-block;
+  height: 28px;
+  position: relative;
+  width: 45px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #c8c8c8;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: '';
+  height: 20px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 20px;
+}
+
+input:checked + .slider {
+  background-color: #ee2a7b;
+}
+
+input:checked + .slider:before {
+  transform: translateX(16px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
