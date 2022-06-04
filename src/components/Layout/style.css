@@ -21,6 +21,11 @@
 .container {
 } */
 
+.logo {
+  height: 5rem;
+  padding-left: 1rem;
+}
+
 header {
   padding: 1rem 0 1rem 0;
   height: 6rem;
@@ -43,13 +48,4 @@ a {
   color: #373739;
   text-decoration: none;
   text-transform: uppercase;
-}
-
-.logo {
-  width: 5rem;
-  height: 5rem;
-  margin-left: 1rem;
-  background-image: url('../../img/Blogo-transparent.png');
-  background-size: contain;
-  background-repeat: no-repeat;
 }

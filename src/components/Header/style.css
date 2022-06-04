@@ -51,11 +51,3 @@ a {
   text-transform: uppercase;
 }
 
-.logo {
-  width: 5rem;
-  height: 5rem;
-  margin-left: 1rem;
-  background-image: url('../../img/Blogo-transparent.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-}

@@ -1,17 +1,17 @@
 import React from 'react';
 import './style.css';
 import { Link, Outlet } from 'react-router-dom';
+import logo from '../../img/Blogo-transparent.png';
 
 export const Header = () => (
   <header className="page-header">
-    <div className="logo" src="./img/Blogo-transparent.png">
-      {/* <div className="theme-switch-wrapper">
-            <span>gender mode</span>
-            <label className="theme-switch" htmlFor="checkbox">
-              <input type="checkbox" id="checkbox" />
-              <div className="slider round"></div>
-            </label>
-          </div> */}
+  <div>
+    <Link
+      style={{ display: 'block', margin: '1rem 0' }}
+      to="/"
+    >
+      <img className="logo" src={logo} />
+    </Link>{' '}
     </div>
 
     <nav className="navigation">
