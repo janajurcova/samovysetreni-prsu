@@ -32,10 +32,12 @@
     flex: 1; 
 }
 .home-header__title {
+    margin: 0;
 }
 
 .home-header__subtitle {
     padding-left: 15rem;
+    margin: 1rem;
     color: #ee2a7b;
 }
 
@@ -104,7 +106,6 @@ a {
   align-items: center;
   margin-left: 2rem;
   margin-top: 1rem;
-  flex-wrap: wrap;
   align-content: flex-end;
   width: 30px;
 }
