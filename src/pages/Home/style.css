@@ -33,6 +33,7 @@
 }
 .home-header__title {
     margin: 0;
+    color: var(--text)
 }
 
 .home-header__subtitle {
@@ -68,13 +69,6 @@
  img.gender {
     height: 1rem;
     margin: 3px;
-}
-
-a {
-  margin: 1rem;
-  color:#373739;
-  text-decoration: none;
-  text-transform: uppercase;
 }
 
 

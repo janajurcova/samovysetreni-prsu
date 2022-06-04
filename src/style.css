@@ -26,27 +26,32 @@ html {
 }
 
 *,
-body,
 ::before,
 ::after {
   box-sizing: border-box;
 }
 
-/* body {
-  background-image: url(./img/cover-opacity.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-}
-
-
-
-main {
-  display:flex;
-  justify-content: space-evenly;
-  
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  position: relative;
+  background: #efefef;
 }
 
 h1 {
-  color: #ee2a7b;
-} */
+  text-align: center;
+  color: var(--pink)
+}
+
+h2 {
+  font-size: 2em;
+  line-height: 1.25em;
+  margin: 0.25em 0;
+}
+ 
+h3 {
+  font-size: 1.5em;
+  line-height: 1em;
+  margin: 0.33em 0;
+}

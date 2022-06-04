@@ -15,15 +15,15 @@ export const Header = () => (
     </div>
 
     <nav className="navigation">
-      <Link style={{ display: 'block', margin: '1rem 0' }} to="/samovysetreni">
+      <Link className="navigation-link" to="/samovysetreni">
         Jak na to(.)(.)
       </Link>{' '}
       <br />{' '}
-      <Link style={{ display: 'block', margin: '1rem 0' }} to="/kalendar">
+      <Link className="navigation-link" to="/kalendar">
         Kalendář
       </Link>{' '}
       <br />{' '}
-      <Link style={{ display: 'block', margin: '1rem 0' }} to="/codelatkdyz">
+      <Link className="navigation-link" to="/codelatkdyz">
         Co dělat, když...
       </Link>{' '}
     </nav>

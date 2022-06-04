@@ -5,11 +5,6 @@ import dayjscs from 'dayjs/locale/cs';
 
 dayjs.locale('cs')
 
-// const date = () => {
-//     for (let day = 1; day =< 31; day++) {
-//         console.log(day)
-//     }
-// };
 
 const Day = ({ day, month }) => {
     const sameMonth = day.isSame(month, "month")
@@ -25,7 +20,6 @@ const Day = ({ day, month }) => {
 }
 
 
-
 const Week = ({ firstday, month }) => {
     return (
         <tr>
@@ -35,7 +29,6 @@ const Week = ({ firstday, month }) => {
         </tr>
     )
 };
-
 
 
 export const Calendar = () => {
@@ -54,7 +47,7 @@ export const Calendar = () => {
                         <a className="btn-prev fontawesome-angle-left" href="#"></a>
                         <a className="btn-next fontawesome-angle-right" href="#"></a>
                     </header>
-                    <table>
+                    <table className="calendar-table">
                         <thead>
                             <tr>
                                 <td>Po</td>

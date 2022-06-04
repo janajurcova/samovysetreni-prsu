@@ -3,6 +3,7 @@
   max-width: 570px;
   height: 470px;
   background-color: white;
+  margin: auto;
 }
 
 .carousel__previous,

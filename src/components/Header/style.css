@@ -8,7 +8,6 @@
   margin-left: auto;
   margin-right: auto;
   min-height: 100vh;
-
   border-right: 1px solid black;
 }
 
@@ -28,7 +27,7 @@ header {
   align-items: center;
 }
 .nav__button {
-  background-color: #ee2a7b;
+  background-color: var(--pink);
   color: #fff;
   width: 100px;
   height: 25px;
@@ -38,16 +37,17 @@ header {
 .navigation {
   display: flex;
   flex-direction: column;
-
   align-content: space-around;
-
   justify-content: right;
 }
 
-a {
-  margin: 1rem;
-  color: #373739;
+.navigation-link {
   text-decoration: none;
   text-transform: uppercase;
+  color: var(--text);
+  display: block;
+  margin-bottom: 2rem;
 }
+
+
 

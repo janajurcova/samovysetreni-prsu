@@ -15,7 +15,6 @@ const Question = ({title, children}) => {
     )
 }
 
-{/* <button className={open ? ' active' : ''} onClick={() => setOpen(!open)}>{?}</button> */}
 export const Questions = () => {
 
     return (
