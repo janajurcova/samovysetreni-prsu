@@ -1,103 +1,84 @@
 import React from 'react';
 import './style.css';
+import { useState } from 'react';
 
-export const Questions = () => {
-    //     const accordion = {
-    //         let acc = document.getElementsByClassName("accordion");
-    //         let i;
+const Question = ({title, children}) => {
+    const [open, setOpen] = useState(false);
 
-    //         for(i = 0; i<acc.length; i++) {
-    //             acc[i].addEventListener("click", function () {
-    //                 /* Toggle between adding and removing the "active" class,
-    //                 to highlight the button that controls the panel */
-    //                 this.classList.toggle("active");
-
-    //                 /* Toggle between hiding and showing the active panel */
-    //                 let panel = this.nextElementSibling;
-    //                 if (panel.style.display === "block") {
-    //                     panel.style.display = "none";
-    //                 } else {
-    //                     panel.style.display = "block";
-    //                 }
-    //             });
-    // }
-    //     }
     return (
-        <main style={{ padding: '1rem' }}>
+        <>
+            <button className={open ? "active accordion" : "accordion"} onClick={()=> setOpen(!open)}>{title}</button>
+            <div className={open ? "active panel" : "panel"}>
+                {children}
+            </div>
+        </>
+    )
+}
+
+{/* <button className={open ? ' active' : ''} onClick={() => setOpen(!open)}>{?}</button> */}
+export const Questions = () => {
+
+    return (
+        <main className="questions-main" style={{ padding: '1rem' }}>
             <h1>Co dělat, když...</h1>
             <div className="questions">
 
-                <button className="accordion">1 - Něco se ti nezdá?</button>
-                <div className="panel">
-                    <p>Navštiv svého gynekologa nebo praktika a objednej se na screening…Dej si pozor, aby šlo o akreditované centrum.
+                <Question title="1 - Něco se ti nezdá">
+                    <p>Navštiv svého gynekologa nebo praktického lékaře a požádej o doporučení na mamologii…Dej si pozor, aby šlo o akreditované centrum.
                         - seznam akreditovaných mamocenter
-                        https://www.mamo.cz/centra/</p>
-                </div>
+                        <ul>
+                        <li><a href="https://www.mamo.cz/centra/">www.mamo.cz/centra</a></li>
+                        </ul>
+                        </p>
+                </Question>
 
-                <button className="accordion">2 - Jsi zmatená z výsledků a nevíš co dál?</button>
-                <div className="panel">
+                <Question title="2 - Jsi zmatená z výsledků a nevíš co dál?">
                     <p>Využij “second opinion”. Máš nárok na názor dalšího odborníka.
                         - seznam kompletních onko center - česká onko společnost
-                        https://www.linkos.cz/lekar-a-multidisciplinarni-tym/narodni-onkologicka-sit/prehled-komplexnich-onkologickych-center-cr/</p>
-                </div>
+                        <ul>
+                        <li><a href="https://www.linkos.cz/lekar-a-multidisciplinarni-tym/narodni-onkologicka-sit/prehled-komplexnich-onkologickych-center-cr/">www.linkos.cz</a></li>
+                        </ul>
+                        </p>
+                </Question>
 
-                <button className="accordion">3 - Ověřuj si informace</button>
-                <div className="panel">
-                    <p> - nzip
-                        https://www.nzip.cz/kategorie/177-rakovina-prsu</p>
-                </div>
-
-                <button className="accordion">4 - Špatné výsledky? To je nám líto.</button>
-                <div className="panel">
-                    <p>Začni od Amélie a socioekonomickou poradnou.
-                        - socioekonom Amelie
-                        https://www.amelie-zs.cz/</p>
-                </div>
-
-                <button className="accordion">5 - Nestačí to? Koukni co pro tebe může udělat Dobrý anděl.</button>
-                <div className="panel">
-                    <p> - dobrý anděl příspěvky organizace
-                        https://www.dobryandel.cz/rakovina-nadace-dobry-andel-pomaha/</p>
-                </div>
-
-                <button className="accordion">6 - Zvládnout ekonomickou situaci ti pomůžou i různé dávky.</button>
-                <div className="panel">
-                    <p>- ministerstvo práce a sociálních věcí
-                        https://www.mpsv.cz/</p>
-                </div>
-
-                <button className="accordion">7 - Nejsi v tom sama. Nech si pomoct a mluv o tom.</button>
-                <div className="panel">
-                    <p> - pacientské organizace - bellis, aliance žen s rakovinou prsu, avon linka,
-                        https://www.bellisky.cz/ https://www.breastcancer.cz/
-                        https://www.zdravaprsa.cz/avon-linka-proti-rakovine-prsu-slavi-10-let/
-                        https://www.facebook.com/AvonLinkaZaZdravaPrsa
-                        Avon linka poskytuje na čísle 800 546 546 zdarma od pondělí do pátku (10–18 hodin). Je určena všem, kteří potřebují poradit ohledně onemocnění a prevence rakoviny prsu. Poradenství je anonymní a poskytují jej ženy, které zvládly náročnou léčbu této nemoci.</p>
-                </div>
-
-                <button className="accordion">8 - Pomohl by ti onkopsycholog na telefonu?</button>
-                <div className="panel">
-                    <p>Bývá každou středu na Avon lince.
+                <Question title="3 - Špatné výsledky? To je nám líto, ale vše zvládneš!">
+                    <p>Začátky bývají často náročnější, neboj se říct si o pomoc!
+                        - psychoonkologická pomoc
+                        <ul>
+                       <li> <a href="ttps://www.linkos.cz/pacient-a-rodina/pomoc-v-nemoci/psychologicka-pomoc/">www.linkos.cz/pacient-a-rodina/pomoc-v-nemoci/psychologicka-pomoc/</a></li>
+                        </ul>
+                        Pomohl by ti onkopsycholog na telefonu? Zavolej na Avon linku za zdravá prsa.
                         - psychologická poradna Avon linka
-                        Linka (na čísle 800 546 546) nabízí i psychologické poradenství, pro které je vyhrazena středa od 16 do 18 hodin. Je zaměřeno na pomoc v náročné životní situaci spojené s diagnózou onkologického onemocnění, tj. při zvládání stresu a emocí a řešení akutních psychických či vztahových problémů.
-                        Dotazy je možné zasílat i e-mailem na zazdravaprsa@breastcancer.cz</p>
-                </div>
+                        Linka (na čísle 800 546 546) nabízí i psychologické poradenství, pro které je vyhrazena středa od 16 do 18 hodin. Je zaměřeno na pomoc v náročné životní situaci spojené s diagnózou onkologického onemocnění, tj. při zvládání stresu a emocí a řešení akutních psychických či vztahových problémů.</p>
+                </Question>
 
-                <button className="accordion">9 - Onkopsychologů je málo, ale jsou.</button>
-                <div className="panel">
-                    <p> - Onkopsycholog a kde ho najít
-                        https://www.linkos.cz/pacient-a-rodina/pomoc-v-nemoci/psychologicka-pomoc/mapa-psychoonkologicke-pece/#search=1</p>
-                </div>
+                <Question title="4 - Nejsi v tom sama. Nech si pomoct a mluv o tom.">
+                    <p> - pacientské organizace - Bellis - mladé ženy s rakovinou prsu, Aliance žen s rakovinou prsu o.p.s., Avon linka za zdravá prsa
+                        <ul>
+                        <li> <a href="https://www.bellisky.cz/">www.bellisky.cz</a></li>
+                        <li> <a href="https://www.breastcancer.cz/">www.breastcancer.cz</a> </li>
+                        <li> <a href="https://www.zdravaprsa.cz/avon-linka-proti-rakovine-prsu-slavi-10-let/">www.zdravaprsa.cz/avon-linka-proti-rakovine-prsu-slavi-10-let/</a></li>
+                        </ul>
+                        Avon linka poskytuje na čísle 800 546 546 zdarma od pondělí do pátku (10–18 hodin). Je určena všem, kteří potřebují poradit ohledně onemocnění a prevence rakoviny prsu. Poradenství je anonymní a poskytují jej ženy, které zvládly náročnou léčbu této nemoci. Dotazy je možné zasílat i e-mailem na zazdravaprsa@breastcancer.cz </p>
+                </Question>
 
-                <button className="accordion">10 - Přihlaš se o svého průvodce. </button>
-                <div className="panel">
-                    <p>Autorkami jsou mladé ženy, které zažily to, co ty.
+                <Question title="5 - Napiš si o knihu Nejsi na to sama - průvodce rakovinou prsu.">
+                    <p>Autorkami jsou mladé ženy, které zažily to, co ty. V knize najdeš spoustu důležitých informací.
                         - Nejsi na to sama - kniha
-                        https://www.bellisky.cz/projekty-a-akce/kniha-nejsi-na-to-sama-pruvodce-rakovinou-prsu/
+                        <ul>
+                        <li><a href="https://www.bellisky.cz/projekty-a-akce/kniha-nejsi-na-to-sama-pruvodce-rakovinou-prsu/">www.bellisky.cz/projekty-a-akce/kniha-nejsi-na-to-sama-pruvodce-rakovinou-prsu/</a></li>
+                        </ul>
+                        </p>
+                </Question>
 
-
-                        Nezapomínej si říkat o pomoc. Nejsi v tom sama</p>
-                </div>
+                <Question title="6 - Řešíš ekonomickou situaci během léčby?">
+                    <p>Nech si pomoci a poradit od odborníků z Amelie z.s.
+                        - socioekonom Amelie
+                        <ul>
+                        <li><a href="https://www.amelie-zs.cz/">www.amelie-zs.cz</a></li>
+                        </ul>
+                        </p>
+                </Question>
             </div>
         </main>
     );

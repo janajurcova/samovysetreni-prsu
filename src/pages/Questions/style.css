@@ -9,11 +9,15 @@
   border: none;
   outline: none;
   transition: 0.4s;
-
+  border-bottom: 1px solid;
+  
 }
-
+.questions-main {
+  width: 80%;
+  margin: auto;
+}
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .accordion:hover {
+.accordion.active, .accordion:hover {
   background-color: #ccc;
 }
 
@@ -24,10 +28,14 @@
   display: none;
   overflow: hidden;
 }
+.panel.active {
+  display: block;
+}
 
 .questions{
-    display: flex;
+  display: flex;
+  width: 100%;
   flex-direction: column;
-  position: absolute; 
   margin-top: 5rem;
 }
+

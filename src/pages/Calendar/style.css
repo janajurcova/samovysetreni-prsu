@@ -97,13 +97,11 @@ table {
   
 }
  
-.calendar .prev-month,
-.calendar .next-month {
+.calendar .other-month {
   color: #cbd1d2;
 }
  
-.calendar .prev-month:hover,
-.calendar .next-month:hover {
+.calendar .other-month:hover {
   border: 2px solid #cbd1d2;
 }
  
