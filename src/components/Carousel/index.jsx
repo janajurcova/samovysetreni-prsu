@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './carousel.css';
-import manual1 from './img/manual1';
-import manual2 from './img/manual2';
-import manual3 from './img/manual3';
-import manual4 from './img/manual4';
+import manual1 from './img/manual1.png';
+import manual2 from './img/manual2.png';
+import manual3 from './img/manual3.png';
+import manual4 from './img/manual4.png';
 
 const images = [
   { title: 'manual1', img: manual1 },
@@ -26,11 +26,11 @@ export const Carousel = () => {
         ←
       </button>
       <div className="carousel__media">
-        <img className="carousel__image" src={images[activePicture]} />
+        <img className="carousel__image" src={images[activePicture].img} />
       </div>
       <button
         onClick={() => {
-          if (activePicture === 4) {
+          if (activePicture === 3) {
             setActivePicture(0);
           } else setActivePicture(activePicture + 1);
         }}
