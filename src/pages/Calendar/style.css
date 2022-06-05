@@ -86,7 +86,6 @@
 .calendar td {
   border: 2px solid transparent;
   border-radius: 50%;
-  display: inline-block;
   height: 4rem;
   line-height: 4rem;
   text-align: center;
@@ -294,4 +293,11 @@ textarea {
   max-width: 510px;
   margin: 0 auto;
 }
+}
+
+@media (max-width: 650px) {
+  .calendar-container__body {
+   width: 100vw;
+  }
+
 }

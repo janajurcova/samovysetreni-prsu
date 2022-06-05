@@ -9,7 +9,7 @@
   background-size: cover;
   flex: 1;
   width: 80%;
-  margin: auto;
+  margin: 0 auto;
   background-attachment: fixed;
 }
 
@@ -27,13 +27,14 @@ header {
   flex: 1;
 }
 
-@media (max-width: 519px) {
+@media (max-width: 650px) {
   .layout {
     flex-direction: column;
-    min-width: 100vh;
+    min-width: 100%;
   }
   .layout-cover {
     background-image: none;
+    width: 100%;
   }
   .logo {
     height: 4rem;
