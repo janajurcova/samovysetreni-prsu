@@ -2,6 +2,7 @@ import React from 'react';
 import './style.css';
 import dayjs from 'dayjs';
 import dayjscs from 'dayjs/locale/cs';
+import { useState } from 'react';
 
 dayjs.locale('cs')
 
@@ -11,11 +12,11 @@ const Day = ({ day, month }) => {
     const currentDay = day.isSame(dayjs(), "date")
     let className = ""
     if (!sameMonth) {
-         className += "other-month " 
-        }
-        if (currentDay) {
-            className += "current-day "
-        }
+        className += "other-month "
+    }
+    if (currentDay) {
+        className += "current-day "
+    }
     return (<td className={className}>{day.date()}</td>)
 }
 
@@ -29,6 +30,78 @@ const Week = ({ firstday, month }) => {
         </tr>
     )
 };
+
+
+const FormMonth = (props) => {
+    const [start, setStart] = useState("");
+    const [cycle, setCycle] = useState("")
+    const handleSubmit = (event) => {
+        event.preventDefault();
+    };
+
+    return (
+        <form onSubmit={handleSubmit}>
+            <h4>Nastavení samovyšetření:</h4>
+            <label className="field">
+                První vyšetření:
+                <input
+                    type="date"
+                    value={start}
+                    onChange={(event) => {
+                        const on = event.target.value;
+                        console.log(on)
+                        setStart(on);
+                    }}
+                /> </label>
+            <label className="field">Opakování po:
+                <input
+                    type="number"
+                    value={cycle}
+                    onChange={(event) => {
+                        const on = event.target.value;
+                        console.log(on)
+                        setCycle(on);
+                    }}
+                /></label>
+            <button className="btn-notice" type="submit" >Nastavit upozornění</button>
+        </form>
+    )
+};
+
+const FormYear = (props) => {
+    const [start, setStart] = useState("");
+    const [cycle, setCycle] = useState("")
+    const handleSubmit = (event) => {
+        event.preventDefault();
+    };
+
+    return (
+        <form onSubmit={handleSubmit}>
+            <h4>Nastavení diagnostického vyšetření:</h4>
+            <label className="field">První vyšetření:
+                <input
+                    type="date"
+                    value={start}
+                    onChange={(event) => {
+                        const on = event.target.value;
+                        console.log(on)
+                        setStart(on);
+                    }}
+                /> </label>
+            <label className="field">Opakování po:
+                <input
+                    type="number"
+                    value={cycle}
+                    onChange={(event) => {
+                        const on = event.target.value;
+                        console.log(on)
+                        setCycle(on);
+                    }}
+                /></label>
+            <button className="btn-notice" type="submit">Nastavit upozornění</button>
+        </form>
+    )
+}
 
 
 export const Calendar = () => {
@@ -66,17 +139,16 @@ export const Calendar = () => {
                     </table>
 
                 </div>
-                <div className="container2">
+                <div className="container-legend">
                     <h4>Legenda:</h4>
                 </div>
-                <div className="container2">
-                    <h4>Nastavení samovyšetření:</h4>
+                <div className="container-settings">
+                    <FormMonth />
                 </div>
-                <div className="container2">
-                    <h4>Nastavení diagnostického vyšetření:</h4>
+                <div className="container-settings">
+                    <FormYear />
                 </div>
             </div>
-
         </main>
     );
 };
