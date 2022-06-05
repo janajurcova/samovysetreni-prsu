@@ -32,11 +32,12 @@ const Week = ({ firstday, month }) => {
 };
 
 
-const FormMonth = (props) => {
+const FormMonth = ({onChange}) => {
     const [start, setStart] = useState("");
     const [cycle, setCycle] = useState("")
     const handleSubmit = (event) => {
         event.preventDefault();
+        onChange({ start, cycle })
     };
 
     return (
@@ -68,11 +69,12 @@ const FormMonth = (props) => {
     )
 };
 
-const FormYear = (props) => {
+const FormYear = ({onChange}) => {
     const [start, setStart] = useState("");
     const [cycle, setCycle] = useState("")
     const handleSubmit = (event) => {
         event.preventDefault();
+        onChange({ start, cycle })
     };
 
     return (
@@ -108,6 +110,12 @@ export const Calendar = () => {
     const date = dayjs()
     const month = date.startOf("month")
     const firstMonday = month.startOf("week")
+    const handleChangeMonth = (data) => {
+        console.log("handleChangeMonth", data)
+    }
+    const handleChangeYear = (data) => {
+        console.log("handleChangeYear", data)
+    }
 
     return (
         <main style={{ padding: '1rem' }}>
@@ -143,10 +151,14 @@ export const Calendar = () => {
                     <h4>Legenda:</h4>
                 </div>
                 <div className="container-settings">
-                    <FormMonth />
+                    <FormMonth 
+                        onChange={handleChangeMonth}
+                    />
                 </div>
                 <div className="container-settings">
-                    <FormYear />
+                    <FormYear 
+                        onChange={handleChangeYear}
+                    />
                 </div>
             </div>
         </main>
