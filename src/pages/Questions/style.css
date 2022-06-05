@@ -2,6 +2,8 @@
 .accordion {
   background-color: #eee;
   color: #444;
+  font-style: normal;
+  font-size: large;
   cursor: pointer;
   padding: 30px;
   margin: 2px;
@@ -16,22 +18,29 @@
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.accordion.active, .accordion:hover {
-  background-color: #ccc;
+.accordion.active,
+.accordion:hover {
+  background-color: var(--cream);
 }
-
+.accordion.active {
+  margin: 0px;
+  border-radius: 5px 5px 0px 0px;
+}
 /* Style the accordion panel. Note: hidden by default */
 .panel {
   padding: 0 18px;
-  background-color: white;
+  background-color: var(--cream);
   display: none;
   overflow: hidden;
 }
 .panel.active {
   display: block;
+  border-radius: 0px 0px 5px 5px;
+  margin: 0px;
+  margin-bottom: 4px;
 }
 
-.questions{
+.questions {
   display: flex;
   width: 80%;
   flex-direction: column;
@@ -44,6 +53,5 @@ li {
 
 .questions a {
   text-decoration: none;
-   color: var(--text);
+  color: var(--text);
 }
-

@@ -8,7 +8,7 @@
   margin-left: auto;
   margin-right: auto;
   min-height: 100vh;
-  border-right: 1px solid black;
+  border-right: 1px solid var(--text);
 }
 
 .container {
@@ -26,13 +26,13 @@ header {
   flex-direction: column;
   align-items: center;
 } */
-.nav__button {
+/* .nav__button {
   background-color: var(--pink);
   color: #fff;
   width: 100px;
   height: 25px;
   border-radius: 5px;
-}
+} */
 
 .navigation {
   display: flex;

@@ -4,12 +4,13 @@
 }
 
 .layout-cover {
-     min-height: 100vh;
-     background-image: url(../../img/cover-opacity.jpg);
-     background-size: cover;
-     flex: 1;
-     width: 80%;
-     margin: auto;
+  min-height: 100vh;
+  background-image: url(../../img/cover-opacity.jpg);
+  background-size: cover;
+  flex: 1;
+  width: 80%;
+  margin: auto;
+  background-attachment: fixed;
 }
 
 .logo {
@@ -35,6 +36,6 @@ header {
     background-image: none;
   }
   .logo {
-    height: 4rem;   
+    height: 4rem;
   }
 }
