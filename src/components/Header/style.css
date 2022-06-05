@@ -78,7 +78,11 @@ header {
     flex-grow: initial;
     background-color: #f9cdbd;
     font-size: 40px;
-    max-width: 519px;
+    gap: 0px;
+    /* max-width: 519px; */
+  }
+  .navigation-bar {
+    margin-top: 80px;
   }
   .hamburger {
     display: block;

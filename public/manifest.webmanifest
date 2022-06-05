@@ -1,0 +1,18 @@
+{
+  "name": "Samovyšetření prsu",
+  "short_name": "Příklad PWA",
+  "theme_color": "#f9cdbd",
+  "background_color": "#f3f3f3",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/img/Icons-cancer.jpg",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
