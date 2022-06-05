@@ -99,7 +99,7 @@ const FormMonth = ({ onChange }) => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <h4>Nastavení samovyšetření:</h4>
+            <h4 className="form-title">Nastavení samovyšetření:</h4>
             <label className="field">
                 První vyšetření:
                 <input
@@ -119,7 +119,7 @@ const FormMonth = ({ onChange }) => {
                         const on = event.target.value;
                         setCycle(on);
                     }}
-                /></label>
+                />dnech</label>
             <button className="btn-notice" type="submit" disabled={start === "" || cycle === ""}>Nastavit upozornění</button>
         </form>
     )
@@ -135,7 +135,7 @@ const FormYear = ({ onChange }) => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <h4>Nastavení diagnostického vyšetření:</h4>
+            <h4 className="form-title">Nastavení diagnostického vyšetření:</h4>
             <label className="field">První vyšetření:
                 <input
                     type="date"
@@ -154,7 +154,7 @@ const FormYear = ({ onChange }) => {
                         const on = event.target.value;
                         setCycle(on);
                     }}
-                /></label>
+                />měsících</label>
             <button className="btn-notice" type="submit" disabled={start === "" || cycle === ""}>Nastavit upozornění</button>
         </form>
     )
@@ -218,9 +218,9 @@ export const Calendar = () => {
 
 
     return (
-        <main style={{ padding: '1rem' }}>
-            <h1>Kalendář</h1>
-            <div className="container1">
+        <div className="calendar-container">
+            <div className="calendar-container__body">
+                <h1>Kalendář</h1>
                 <div className="calendar">
                     <header className="calendar-header">
 
@@ -245,22 +245,32 @@ export const Calendar = () => {
                             {(new Array(5)).fill(null).map((_, index) => <Week firstday={firstMonday.add(index, "week")} month={month} recurrenceMonth={recurrenceMonth} recurrenceYear={recurrenceYear} key={index} />)}
                         </tbody>
                     </table>
-
                 </div>
-                <div className="container-legend">
-                    <h4>Legenda:</h4>
+                    <div className="container-legend">
+                        <h4 className="form-title__legend">Legenda:</h4>
+                        <div>
+                            <span className="container-legend__month"></span>Samovyšetření
+                        </div>
+                        <div>
+                            <span className="container-legend__year"></span>Diagnostické vyšetření
+                        </div>
+                    </div>
+                
                 </div>
-                <div className="container-settings">
+                <div>
+               
+                <div className="container-settings__month">
                     <FormMonth
                         onChange={handleChangeMonth}
                     />
                 </div>
-                <div className="container-settings">
+                <div className="container-settings__year">
                     <FormYear
                         onChange={handleChangeYear}
                     />
                 </div>
+                </div>
             </div>
-        </main>
+        
     );
 };
