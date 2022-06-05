@@ -167,7 +167,13 @@ label {
   background-color: var(--pink);
 }
 
-.btn-notice:active {
+.btn-notice:disabled{
+  border: 1px solid var(--pink);
+  background-color: white;
+  color: var(--pink)
+}
+
+.btn-notice:active:not(:disabled) {
   transform: scale(0.9);
 }
 

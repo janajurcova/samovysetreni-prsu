@@ -107,7 +107,6 @@ const FormMonth = ({ onChange }) => {
                     value={start}
                     onChange={(event) => {
                         const on = event.target.value;
-                        console.log(on)
                         setStart(on);
                     }}
                 /> </label>
@@ -115,13 +114,13 @@ const FormMonth = ({ onChange }) => {
                 <input
                     type="number"
                     value={cycle}
+                    min={10}
                     onChange={(event) => {
                         const on = event.target.value;
-                        console.log(on)
                         setCycle(on);
                     }}
                 /></label>
-            <button className="btn-notice" type="submit" >Nastavit upozornění</button>
+            <button className="btn-notice" type="submit" disabled={start === "" || cycle === ""}>Nastavit upozornění</button>
         </form>
     )
 };
@@ -143,7 +142,6 @@ const FormYear = ({ onChange }) => {
                     value={start}
                     onChange={(event) => {
                         const on = event.target.value;
-                        console.log(on)
                         setStart(on);
                     }}
                 /> </label>
@@ -151,13 +149,13 @@ const FormYear = ({ onChange }) => {
                 <input
                     type="number"
                     value={cycle}
+                    min={6}
                     onChange={(event) => {
                         const on = event.target.value;
-                        console.log(on)
                         setCycle(on);
                     }}
                 /></label>
-            <button className="btn-notice" type="submit">Nastavit upozornění</button>
+            <button className="btn-notice" type="submit" disabled={start === "" || cycle === ""}>Nastavit upozornění</button>
         </form>
     )
 }
