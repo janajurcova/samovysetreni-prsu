@@ -10,9 +10,12 @@ export const Footer = () => {
           <InstallButton />
         </div>
         <div className="bellis__footer">
-          <small>
-            Copyright &copy; Bellis – mladé ženy s rakovinou prsu. Vyrobeno při
-            Digitální akademii Czechitas 2022
+          <small className="copyright">
+            <p>Copyright &copy; </p>
+            <p>
+              Bellis – mladé ženy s rakovinou prsu. Vyrobeno při Digitální
+              akademii Czechitas 2022
+            </p>
           </small>
         </div>
       </div>
