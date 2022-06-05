@@ -55,7 +55,6 @@ header {
   display: none;
 }
 
-
 @media (max-width: 519px) {
   .page-header {
     flex-direction: row;
@@ -74,45 +73,49 @@ header {
   .navigation {
     flex-direction: row;
   }
+  .navigation-link {
+    display: flex;
+    flex-grow: initial;
+    background-color: #f9cdbd;
+    font-size: 40px;
+    max-width: 519px;
+  }
   .hamburger {
-	display: block;
-	position: relative;
-	border: none;
-	background-color: transparent;
-  align-items: center;
+    display: block;
+    position: relative;
+    border: none;
+    background-color: transparent;
+    align-items: center;
+  }
+
+  .hamburger span {
+    position: absolute;
+    top: calc(50% - 2px);
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: currentColor;
+    transition-property: opacity, transform;
+    transition-duration: 0.2s;
+  }
+
+  .hamburger span:nth-child(1) {
+    transform: translateY(-250%);
+  }
+
+  .hamburger span:nth-child(3) {
+    transform: translateY(250%);
+  }
+
+  .hamburger--otevrene span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger--otevrene span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+
+  .hamburger--otevrene span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
 }
-
-.hamburger span {
-	position: absolute;
-	top: calc(50% - 2px);
-	left: 0;
-	right: 0;
-	height: 4px;
-	background-color: currentColor;
-	transition-property: opacity, transform;
-	transition-duration: 0.2s;
-}
-
-.hamburger span:nth-child(1) {
-	transform: translateY(-250%);
-}
-
-.hamburger span:nth-child(3) {
-	transform: translateY(250%);
-}
-
-.hamburger--otevrene span:nth-child(2) {
-	opacity: 0;
-}
-
-.hamburger--otevrene span:nth-child(1) {
-	transform: rotate(45deg);
-}
-
-.hamburger--otevrene span:nth-child(3) {
-	transform: rotate(-45deg);
-}
-}
-
-
-
