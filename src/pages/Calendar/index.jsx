@@ -3,36 +3,45 @@ import './style.css';
 import dayjs from 'dayjs';
 import dayjscs from 'dayjs/locale/cs';
 import { useState } from 'react';
+import dayjsRecur from 'dayjs-recur'
 
+dayjs.extend(dayjsRecur)
 dayjs.locale('cs')
 
 
-const Day = ({ day, month }) => {
+const Day = ({ day, month, recurrenceYear, recurrenceMonth }) => {
     const sameMonth = day.isSame(month, "month")
     const currentDay = day.isSame(dayjs(), "date")
-    let className = ""
+    let className = " "
     if (!sameMonth) {
         className += "other-month "
     }
     if (currentDay) {
         className += "current-day "
     }
+    if (recurrenceMonth !== null && recurrenceMonth.matches(day)) {
+        className += "month-noticeDay "
+    }
+    if (recurrenceYear !== null && recurrenceYear.matches(day)) {
+        className += "year-noticeDay "
+    }
+
     return (<td className={className}>{day.date()}</td>)
 }
 
 
-const Week = ({ firstday, month }) => {
+const Week = ({ firstday, month, recurrenceMonth, recurrenceYear }) => {
     return (
         <tr>
             {
-                (new Array(7)).fill(null).map((_, index) => <Day day={firstday.add(index, "day")} month={month} key={index} />)
+                (new Array(7)).fill(null).map((_, index) => <Day day={firstday.add(index, "day")} recurrenceYear={recurrenceYear} recurrenceMonth={recurrenceMonth} month={month} key={index} />)
             }
         </tr>
     )
 };
 
 
-const FormMonth = ({onChange}) => {
+const FormMonth = ({ onChange }) => {
     const [start, setStart] = useState("");
     const [cycle, setCycle] = useState("")
     const handleSubmit = (event) => {
@@ -69,7 +78,7 @@ const FormMonth = ({onChange}) => {
     )
 };
 
-const FormYear = ({onChange}) => {
+const FormYear = ({ onChange }) => {
     const [start, setStart] = useState("");
     const [cycle, setCycle] = useState("")
     const handleSubmit = (event) => {
@@ -110,16 +119,23 @@ export const Calendar = () => {
     const date = dayjs()
     const month = date.startOf("month")
     const firstMonday = month.startOf("week")
+    const [dateMonth, setDateMonth] = useState(null)
+    const [dateYear, setDateYear] = useState(null)
+
     const handleChangeMonth = (data) => {
-        console.log("handleChangeMonth", data)
+        setDateMonth(data)
     }
     const handleChangeYear = (data) => {
-        console.log("handleChangeYear", data)
+        setDateYear(data)
+        console.log(data)
     }
+
+    const recurrenceMonth =  dateMonth === null ? null : dayjs(dateMonth.start).recur().every(dateMonth.cycle, "days");
+    const recurrenceYear = dateYear === null ? null : dayjs(dateYear.start).recur().every(dateYear.cycle, "months");
+
 
     return (
         <main style={{ padding: '1rem' }}>
-
             <h1>Kalendář</h1>
             <div className="container1">
                 <div className="calendar">
@@ -142,7 +158,7 @@ export const Calendar = () => {
                         </thead>
 
                         <tbody>
-                            {(new Array(5)).fill(null).map((_, index) => <Week firstday={firstMonday.add(index, "week")} key={index} />)}
+                            {(new Array(5)).fill(null).map((_, index) => <Week firstday={firstMonday.add(index, "week")} recurrenceMonth={recurrenceMonth} recurrenceYear={recurrenceYear} key={index} />)}
                         </tbody>
                     </table>
 
@@ -151,12 +167,12 @@ export const Calendar = () => {
                     <h4>Legenda:</h4>
                 </div>
                 <div className="container-settings">
-                    <FormMonth 
+                    <FormMonth
                         onChange={handleChangeMonth}
                     />
                 </div>
                 <div className="container-settings">
-                    <FormYear 
+                    <FormYear
                         onChange={handleChangeYear}
                     />
                 </div>

@@ -58,10 +58,19 @@
 }
  
 .current-day {
-  background: #ee2a7b;
+  background: var(--background-secondary);
+}
+
+.month-noticeDay {
+  background: var(--pink);
   color: #f9f9f9;
 }
- 
+
+.year-noticeDay {
+    background: var(--cream);
+    color: var(--text)
+}
+
 .event {
   cursor: pointer;
   position: relative;
