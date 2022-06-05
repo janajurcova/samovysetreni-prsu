@@ -7,6 +7,55 @@ import dayjsRecur from 'dayjs-recur'
 dayjs.extend(dayjsRecur)
 dayjs.locale('cs')
 
+/**
+ * Naplánuje zobrazení notifikace.
+ * 
+ * @param {string} title Titulek notifikace.
+ * @param {string} body Tělo (text) notifikace.
+ * @param {string} tag  Štítek (kategorie) notifikace – interní pro aplikaci.
+ * @param {dayjs} datetime Datum a čas (dayjs), kdy notifikaci zobrazit.
+ * @returns 
+ */
+const setNotification = (title, body, tag, datetime) => {
+    const registerNotification = () => {
+        navigator.serviceWorker.getRegistration().then(registration => {
+            registration.showNotification(title, {
+                tag: tag,
+                body: body,
+                requireInteraction: true,
+                icon: "/img/Icons-cancer.jpg",
+                showTrigger: new TimestampTrigger(datetime.valueOf()),
+            })
+        });
+    }
+    if (!('showTrigger' in Notification.prototype)) {
+        console.error("Notifikace nejsou podporovány.")
+        return
+    }
+    if (window.Notification && Notification.permission !== 'granted') {
+        Notification.requestPermission(status => {
+            if (status === 'granted') {
+                console.log('Notifications allowed.')
+                registerNotification()
+            }
+        })
+    } else {
+        registerNotification()
+    }
+}
+
+/**
+ * Zruší všechny naplánované notifikace s daným štítkem.
+ * @param {string} tag Štítek (kategorie) notifikace – interní pro aplikaci.
+ */
+const cleanNotifications = (tag) => {
+    navigator.serviceWorker.getRegistration().then(registration => {
+        registration.getNotifications({
+            tag: tag,
+            includeTriggered: true
+        }).then(notifications => notifications.forEach((notification) => notification.close()))
+    });
+}
 
 const Day = ({ day, month, recurrenceYear, recurrenceMonth }) => {
     const sameMonth = day.isSame(month, "month")
@@ -113,6 +162,10 @@ const FormYear = ({ onChange }) => {
     )
 }
 
+const generateMonthRecurrent = (dateMonth) => dayjs(dateMonth.start).recur().every(dateMonth.cycle, "days")
+const generateYearRecurrent = (dateYear) => dayjs(dateYear.start).recur().every(dateYear.cycle, "months")
+
+
 
 export const Calendar = () => {
     const [month, setMonth] = useState(() => dayjs().startOf("month"))
@@ -126,7 +179,8 @@ export const Calendar = () => {
             return JSON.parse(data)
         }
     })
-    
+
+
     const [dateYear, setDateYear] = useState(() => {
         const data = localStorage.getItem("diagnostickeVysetreni")
         if (data === null) {
@@ -137,20 +191,32 @@ export const Calendar = () => {
         }
     })
 
+
+    const recurrenceMonth = dateMonth === null ? null : generateMonthRecurrent(dateMonth);
+    const recurrenceYear = dateYear === null ? null : generateYearRecurrent(dateYear);
+
     const handleChangeMonth = (data) => {
         setDateMonth(data)
+        cleanNotifications("samovysetreni")
+        // setNotification("Samovyšetření prsu", "Je čas se vyšeřit: \"Touch me if you can\"", "samovysetreni", dayjs().add(5, "second"))
+        
+        generateMonthRecurrent(data)
+            .next(12)
+            .forEach(dateTime =>
+                setNotification("Samovyšetření prsu", "Je čas se vyšeřit: \"Touch me if you can\"", "samovysetreni", dateTime.hour(9))
+            )
         localStorage.setItem("samovysetreni", JSON.stringify(data))
     }
+
     const handleChangeYear = (data) => {
         setDateYear(data)
+        cleanNotifications("diagnostickeVysetreni")
+        generateYearRecurrent(data).next(4).forEach(monthTime => setNotification("Objednej se na ultrzvuk/mamograf", "Je čas se vyšeřit: \"Touch me if you can\"", "diagnostickeVysetreni", monthTime.hour(9)))
         localStorage.setItem("diagnostickeVysetreni", JSON.stringify(data))
     }
     const changeMonth = (delta) => {
         setMonth(month.add(delta, "month"))
     }
-
-    const recurrenceMonth = dateMonth === null ? null : dayjs(dateMonth.start).recur().every(dateMonth.cycle, "days");
-    const recurrenceYear = dateYear === null ? null : dayjs(dateYear.start).recur().every(dateYear.cycle, "months");
 
 
     return (
