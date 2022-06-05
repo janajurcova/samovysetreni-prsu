@@ -115,19 +115,38 @@ const FormYear = ({ onChange }) => {
 
 
 export const Calendar = () => {
-    const [month, setMonth] = useState(()=> dayjs().startOf("month"))
+    const [month, setMonth] = useState(() => dayjs().startOf("month"))
     const firstMonday = month.startOf("week")
-    const [dateMonth, setDateMonth] = useState(null)
-    const [dateYear, setDateYear] = useState(null)
+    const [dateMonth, setDateMonth] = useState(() => {
+        const data = localStorage.getItem("samovysetreni")
+        if (data === null) {
+            return null
+        }
+        else {
+            return JSON.parse(data)
+        }
+    })
+    
+    const [dateYear, setDateYear] = useState(() => {
+        const data = localStorage.getItem("diagnostickeVysetreni")
+        if (data === null) {
+            return null
+        }
+        else {
+            return JSON.parse(data)
+        }
+    })
 
     const handleChangeMonth = (data) => {
         setDateMonth(data)
+        localStorage.setItem("samovysetreni", JSON.stringify(data))
     }
     const handleChangeYear = (data) => {
         setDateYear(data)
+        localStorage.setItem("diagnostickeVysetreni", JSON.stringify(data))
     }
     const changeMonth = (delta) => {
-        setMonth(month.add(delta,"month"))
+        setMonth(month.add(delta, "month"))
     }
 
     const recurrenceMonth = dateMonth === null ? null : dayjs(dateMonth.start).recur().every(dateMonth.cycle, "days");
@@ -142,7 +161,7 @@ export const Calendar = () => {
                     <header className="calendar-header">
 
                         <button className="las la-angle-left" onClick={() => changeMonth(-1)}></button>
-                            <h2>{month.format("MMMM")}</h2>
+                        <h2>{month.format("MMMM")}</h2>
                         <button className="las la-angle-right" onClick={() => changeMonth(1)} ></button>
                     </header>
                     <table className="calendar-table">
