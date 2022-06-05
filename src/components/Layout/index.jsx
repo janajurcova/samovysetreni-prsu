@@ -12,8 +12,8 @@ export const Layout = () => {
         <main className="layout-cover">
           <Outlet />
         </main>
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 };

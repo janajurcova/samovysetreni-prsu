@@ -28,8 +28,8 @@ export const InstallButton = () => {
       <div className="downloadApp__footer">Stáhnout jako</div>
       <button
         className="nav__button"
-        // style={{ display: deferredPrompt ? 'inline' : 'none' }}
-        // onClick={handleClick}
+        style={{ display: deferredPrompt ? 'inline' : 'none' }}
+        onClick={handleClick}
       >
         App
       </button>

@@ -9,10 +9,10 @@
   "start_url": "/",
   "icons": [
     {
-      "src": "/img/Icons-cancer.jpg",
-      "sizes": "512x512",
+      "src": "/img/Icons-cancer.png",
+      "sizes": "401x401",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any"
     }
   ]
 }
