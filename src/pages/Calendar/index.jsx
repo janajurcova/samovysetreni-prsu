@@ -4,7 +4,6 @@ import dayjs from 'dayjs';
 import dayjscs from 'dayjs/locale/cs';
 import { useState } from 'react';
 import dayjsRecur from 'dayjs-recur'
-
 dayjs.extend(dayjsRecur)
 dayjs.locale('cs')
 
@@ -127,7 +126,6 @@ export const Calendar = () => {
     }
     const handleChangeYear = (data) => {
         setDateYear(data)
-        console.log(data)
     }
 
     const recurrenceMonth =  dateMonth === null ? null : dayjs(dateMonth.start).recur().every(dateMonth.cycle, "days");
