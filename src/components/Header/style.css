@@ -57,7 +57,7 @@ header {
 
 @media (max-width: 519px) {
   .page-header {
-    flex-direction: row;
+    flex-direction: row-reverse;
     border-right: none;
     border-bottom: 1px solid;
     min-height: 5rem;
@@ -90,6 +90,7 @@ header {
     border: none;
     background-color: transparent;
     align-items: center;
+    width: 5rem;
   }
 
   .hamburger span {

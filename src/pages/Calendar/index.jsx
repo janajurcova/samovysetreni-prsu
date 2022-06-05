@@ -115,8 +115,7 @@ const FormYear = ({ onChange }) => {
 
 
 export const Calendar = () => {
-    const date = dayjs()
-    const month = date.startOf("month")
+    const [month, setMonth] = useState(()=> dayjs().startOf("month"))
     const firstMonday = month.startOf("week")
     const [dateMonth, setDateMonth] = useState(null)
     const [dateYear, setDateYear] = useState(null)
@@ -127,8 +126,11 @@ export const Calendar = () => {
     const handleChangeYear = (data) => {
         setDateYear(data)
     }
+    const changeMonth = (delta) => {
+        setMonth(month.add(delta,"month"))
+    }
 
-    const recurrenceMonth =  dateMonth === null ? null : dayjs(dateMonth.start).recur().every(dateMonth.cycle, "days");
+    const recurrenceMonth = dateMonth === null ? null : dayjs(dateMonth.start).recur().every(dateMonth.cycle, "days");
     const recurrenceYear = dateYear === null ? null : dayjs(dateYear.start).recur().every(dateYear.cycle, "months");
 
 
@@ -137,10 +139,11 @@ export const Calendar = () => {
             <h1>Kalendář</h1>
             <div className="container1">
                 <div className="calendar">
-                    <header>
-                        <h2>{date.format("MMMM")}</h2>
-                        <a className="btn-prev fontawesome-angle-left" href="#"></a>
-                        <a className="btn-next fontawesome-angle-right" href="#"></a>
+                    <header className="calendar-header">
+
+                        <button className="las la-angle-left" onClick={() => changeMonth(-1)}></button>
+                            <h2>{month.format("MMMM")}</h2>
+                        <button className="las la-angle-right" onClick={() => changeMonth(1)} ></button>
                     </header>
                     <table className="calendar-table">
                         <thead>
@@ -156,7 +159,7 @@ export const Calendar = () => {
                         </thead>
 
                         <tbody>
-                            {(new Array(5)).fill(null).map((_, index) => <Week firstday={firstMonday.add(index, "week")} recurrenceMonth={recurrenceMonth} recurrenceYear={recurrenceYear} key={index} />)}
+                            {(new Array(5)).fill(null).map((_, index) => <Week firstday={firstMonday.add(index, "week")} month={month} recurrenceMonth={recurrenceMonth} recurrenceYear={recurrenceYear} key={index} />)}
                         </tbody>
                     </table>
 

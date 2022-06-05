@@ -20,8 +20,9 @@
  
 }
  
-.calendar header {
-  position: relative;
+.calendar-header {
+  display: flex;
+ justify-content: space-around;
 }
  
  
