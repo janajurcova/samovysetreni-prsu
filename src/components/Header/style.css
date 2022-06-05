@@ -21,11 +21,11 @@ header {
   padding: 1rem 0 1rem 0;
   height: 6rem;
 }
-.downloadApp {
+/* .downloadApp__header {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 .nav__button {
   background-color: var(--pink);
   color: #fff;
@@ -57,15 +57,16 @@ header {
 
 @media (max-width: 519px) {
   .page-header {
-    flex-direction: row;
+    flex-direction: row-reverse;
     border-right: none;
     border-bottom: 1px solid;
     min-height: 5rem;
     min-width: 100vh;
+    align-items: center;
   }
-  .downloadApp {
+  /* .downloadApp__header {
     display: none;
-  }
+  } */
 
   .navigation {
     display: none;
@@ -90,6 +91,7 @@ header {
     border: none;
     background-color: transparent;
     align-items: center;
+    font-size: 50px;
   }
 
   .hamburger span {

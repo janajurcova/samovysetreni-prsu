@@ -1,0 +1,10 @@
+.downloadApp__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 519px) {
+  .downloadApp__footer {
+    display: none;
+  }
+}
