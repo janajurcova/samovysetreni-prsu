@@ -29,6 +29,8 @@
 }
 
 @media (max-width: 650px) {
- 
+  .manual__image {
+    min-width: 100vw;
+  }  
 
 }
