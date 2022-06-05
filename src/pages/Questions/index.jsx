@@ -15,7 +15,7 @@ const Question = ({ title, children }) => {
         {open ? (
           <i className="las la-angle-up"></i>
         ) : (
-          <i class="las la-angle-down"></i>
+          <i className="las la-angle-down"></i>
         )}
       </button>
       <div className={open ? 'active panel' : 'panel'}>{children}</div>

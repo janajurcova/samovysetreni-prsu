@@ -14,7 +14,7 @@ const Menu = () => {
         aria-label="menu"
         onClick={() => setActive(!active)}
       >
-        <i class="las la-bars"></i>
+        <i className="las la-bars"></i>
       </button>
       {active && (
         <ul className="navigation-bar">
