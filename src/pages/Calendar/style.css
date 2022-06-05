@@ -60,7 +60,16 @@
  justify-content: space-around;
 }
  
- 
+.calendar-prev,
+.calendar-next {
+     display: block;
+    position: relative;
+    border: none;
+    background-color: transparent;
+    align-items: center;
+    font-size: 50px;
+} 
+
 .calendar thead {
   font-weight: 600;
   text-transform: uppercase;

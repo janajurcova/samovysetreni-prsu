@@ -224,9 +224,9 @@ export const Calendar = () => {
                 <div className="calendar">
                     <header className="calendar-header">
 
-                        <button className="las la-angle-left" onClick={() => changeMonth(-1)}></button>
+                        <button className="calendar-prev" onClick={() => changeMonth(-1)}><i className="las la-angle-left"></i></button>
                         <h2>{month.format("MMMM")}</h2>
-                        <button className="las la-angle-right" onClick={() => changeMonth(1)} ></button>
+                        <button className="calendar-next" onClick={() => changeMonth(1)} ><i className="las la-angle-right"></i></button>
                     </header>
                     <table className="calendar-table">
                         <thead>
