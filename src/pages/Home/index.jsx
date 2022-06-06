@@ -30,40 +30,44 @@ export const Home = () => {
             </header>
             <main>
                 <div className="homepage-main">
-                 <div className="homepage-main__body">
-                    <div className="homepage-main__manual">
-                    <label>Jak na to (.)(.)</label>
-                        <Link
-                            style={{ display: 'block', margin: '1rem 0' }}
-                            to="/samovysetreni"
-                        >
-                            <img className="icon1" src={icon1} />
-                        </Link>{' '}
-                        
+                    <div className="homepage-main__body">
+                        <div className="homepage-main__manual">
+                            <label>Jak na to (.)(.)</label>
+                            <Link
+                                style={{ display: 'block', margin: '1rem 0' }}
+                                to="/samovysetreni"
+                            >
+                                <img className="icon1" src={icon1} />
+                            </Link>{' '}
+
+                        </div>
+                        <div className="homepage-main__calendar">
+                            <label>Kalendář</label>
+                            <Link
+                                style={{ display: 'block', margin: '1rem 0' }}
+                                to="/kalendar"
+                            >
+                                <img className="icon2" src={icon2} />
+                            </Link>{' '}
+
+                        </div>
+                        <div className="homepage-main__questions">
+                            <label>Co dělat, když...</label>
+                            <Link
+                                style={{ display: 'block', margin: '1rem 0' }}
+                                to="/codelatkdyz"
+                            >
+                                <img className="icon3" src={icon3} />
+                            </Link>{' '}
+
+                        </div>
                     </div>
-                    <div className="homepage-main__calendar">
-                        <label>Kalendář</label>
-                        <Link
-                            style={{ display: 'block', margin: '1rem 0' }}
-                            to="/kalendar"
-                        >
-                            <img className="icon2" src={icon2} />
-                        </Link>{' '}
-                        
+                   
+                    <div className="bellis"> 
+                        <div ><a className="bellis-facebook" href="https://www.facebook.com/mybellisky?locale=cs_CZ"><i class="lab la-facebook"></i></a></div>
+                        <div><img className="Bellis" src={bellis} /></div>
+                        <div className="bellis-info"><i class="las la-info-circle"></i></div>
                     </div>
-                    <div className="homepage-main__questions">
-                        <label>Co dělat, když...</label>
-                        <Link
-                            style={{ display: 'block', margin: '1rem 0' }}
-                            to="/codelatkdyz"
-                        >
-                            <img className="icon3" src={icon3} />
-                        </Link>{' '}
-                        
-                    </div>
-                    
-                </div>
-                <div className="bellis"> <img className="Bellis" src={bellis} /></div>
                 </div>
             </main>
         </div>

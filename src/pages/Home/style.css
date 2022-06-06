@@ -57,6 +57,23 @@
   margin: 0 auto;
  }
 
+ .bellis-info {
+   font-size: 30px;
+   color: white;
+   background-color: var(--pink);
+   border-radius: 50%;
+   margin-left: 5rem;
+
+ }
+ .bellis-facebook {
+   font-size: 30px;
+   color: white;
+   background-color: var(--pink);
+   border-radius: 50%;
+   margin-right: 5rem;
+   text-decoration: none;
+ }
+
  img.icon1,
  img.icon2,
  img.icon3 {
@@ -69,7 +86,7 @@
     margin: 3px;
 }
   img.Bellis {
-    width: 20rem;
+    width: 15rem;
   }
 
 
@@ -160,8 +177,14 @@ input:checked + .slider:before {
     .home-header__title {
         font-size: 23px;
     }
-    
-    img.Bellis {
-      max-width: 60vw;
+
+    img.bellis {
+      max-width: 30vw;
+    }
+    .bellis-facebook {
+      margin-right: 0.5rem;
+    }
+    .bellis-info {
+      margin-left: 0.5rem;
     }
 }
