@@ -13,12 +13,14 @@
   --pink: #ee2a7b;
   --grey: #373739;
   --cream: #f9cdbd;
+  --blue: #7A89C2;
 }
 
 :root[data-theme='men'] {
   --background-primary: #132221;
-  --background-secondary: #535257;
-  --main-color: #535257
+  --background-secondary: #7A89C250;
+
+  --main-color:  #7A89C2;
   --text: #373739;
 }
 
