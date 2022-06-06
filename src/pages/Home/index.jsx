@@ -5,6 +5,7 @@ import gender from './../../img/gender-icon.png'
 import icon1 from '../../img/Icons/Icons-flower.jpg'
 import icon2 from '../../img/Icons/Icons-cancer.jpg'
 import icon3 from '../../img/Icons/Icons-B.jpg'
+import bellis from '../../img/Bellis-logo-transparent.png'
 
 const Switcher = () => {
     return (<div className="theme-switch-wrapper">
@@ -29,6 +30,7 @@ export const Home = () => {
             </header>
             <main>
                 <div className="homepage-main">
+                 <div className="homepage-main__body">
                     <div className="homepage-main__manual">
                     <label>Jak na to (.)(.)</label>
                         <Link
@@ -59,6 +61,9 @@ export const Home = () => {
                         </Link>{' '}
                         
                     </div>
+                    
+                </div>
+                <div className="bellis"> <img className="Bellis" src={bellis} /></div>
                 </div>
             </main>
         </div>
