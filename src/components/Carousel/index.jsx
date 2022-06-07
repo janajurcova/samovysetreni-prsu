@@ -9,6 +9,7 @@ import number2 from './img/2.png';
 import number3 from './img/3.png';
 import number4 from './img/4.png';
 
+
 const images = [
   {
     title: 'Vyšetřuj se pravidelně',
@@ -48,7 +49,7 @@ export const Carousel = () => {
           aria-label="previous"
           disabled={activePicture === 0}
         >
-          ←
+          <i class="las la-angle-left"></i>
         </button>
         <div className="carousel__media">
           <div className="carousel__images">
@@ -72,7 +73,7 @@ export const Carousel = () => {
           className="carousel__next"
           aria-label="next"
         >
-          →
+          <i class="las la-angle-right"></i>
         </button>
       </div>
     </>
