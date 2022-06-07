@@ -12,24 +12,42 @@ const Menu = () => {
       <button
         className={active ? 'hamburger hamburger--otevrene' : 'hamburger'}
         aria-label="menu"
-        onClick={() => setActive(!active)}
+        onClick={() => {
+          if (active) {
+            setActive(false);
+          } else {
+            setActive(true);
+          }
+        }}
       >
         <i className="las la-bars"></i>
       </button>
       {active && (
         <ul className="navigation-bar">
           <li>
-            <Link className="navigation-link" to="/samovysetreni">
+            <Link
+              className="navigation-link"
+              to="/samovysetreni"
+              onClick={() => setActive(false)}
+            >
               Jak na to(.)(.)
             </Link>{' '}
           </li>
           <li>
-            <Link className="navigation-link" to="/kalendar">
+            <Link
+              className="navigation-link"
+              to="/kalendar"
+              onClick={() => setActive(false)}
+            >
               Kalendář
             </Link>
           </li>
           <li>
-            <Link className="navigation-link" to="/codelatkdyz">
+            <Link
+              className="navigation-link"
+              to="/codelatkdyz"
+              onClick={() => setActive(false)}
+            >
               Co dělat, když...
             </Link>
           </li>
