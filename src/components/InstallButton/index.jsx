@@ -25,7 +25,7 @@ export const InstallButton = () => {
 
   return (
     <>
-      <div className="downloadApp__footer">Stáhnout jako</div>
+      <div className="downloadApp">Stáhnout jako</div>
       <button
         className="nav__button"
         style={{ display: deferredPrompt ? 'inline' : 'none' }}
