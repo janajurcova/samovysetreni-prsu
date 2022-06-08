@@ -17,9 +17,8 @@
 }
 
 :root[data-theme='men'] {
-  --background-primary: #132221;
+  --background-primary: #f3f3f3;
   --background-secondary: #7A89C250;
-
   --main-color:  #7A89C2;
   --text: #373739;
 }
@@ -45,7 +44,7 @@ body {
 
 h1 {
   text-align: center;
-  color: var(--pink)
+  color: var(--main-color)
 }
 
 h2 {
@@ -59,3 +58,4 @@ h3 {
   line-height: 1em;
   margin: 0.33em 0;
 }
+
