@@ -88,7 +88,7 @@ const Week = ({ firstday, month, recurrenceMonth, recurrenceYear }) => {
     )
 };
 
-
+/*-----------formulář zadání dat pro Samovyšetření----- */
 const FormMonth = ({ onChange }) => {
     const [start, setStart] = useState("");
     const [cycle, setCycle] = useState("")
@@ -125,6 +125,7 @@ const FormMonth = ({ onChange }) => {
     )
 };
 
+/*-----------formulář zadání dat pro Diagnostické vyšetření----- */
 const FormYear = ({ onChange }) => {
     const [start, setStart] = useState("");
     const [cycle, setCycle] = useState("")
@@ -160,14 +161,20 @@ const FormYear = ({ onChange }) => {
     )
 }
 
+
+/*-------nastavení opakévání vyšetření------ */
 const generateMonthRecurrent = (dateMonth) => dayjs(dateMonth.start).recur().every(dateMonth.cycle, "days")
 const generateYearRecurrent = (dateYear) => dayjs(dateYear.start).recur().every(dateYear.cycle, "months")
 
 
+/*----------Kalendář---------- */
 
 export const Calendar = () => {
     const [month, setMonth] = useState(() => dayjs().startOf("month"))
     const firstMonday = month.startOf("week")
+
+
+/*-----uložení dat samovyšetření do LocalStorage----- */
     const [dateMonth, setDateMonth] = useState(() => {
         const data = localStorage.getItem("samovysetreni")
         if (data === null) {
@@ -178,7 +185,7 @@ export const Calendar = () => {
         }
     })
 
-
+/*-----uložení dat diagnostického vyšetření do LocalStorage----- */
     const [dateYear, setDateYear] = useState(() => {
         const data = localStorage.getItem("diagnostickeVysetreni")
         if (data === null) {
@@ -193,6 +200,8 @@ export const Calendar = () => {
     const recurrenceMonth = dateMonth === null ? null : generateMonthRecurrent(dateMonth);
     const recurrenceYear = dateYear === null ? null : generateYearRecurrent(dateYear);
 
+
+    /*----nastavení času a znění Notifikace na samovyšetření--- */
     const handleChangeMonth = (data) => {
         setDateMonth(data)
         cleanNotifications("samovysetreni")
@@ -206,6 +215,7 @@ export const Calendar = () => {
         localStorage.setItem("samovysetreni", JSON.stringify(data))
     }
 
+    /*----nastavení času a znění Notifikace na samovyšetření--- */
     const handleChangeYear = (data) => {
         setDateYear(data)
         cleanNotifications("diagnostickeVysetreni")
