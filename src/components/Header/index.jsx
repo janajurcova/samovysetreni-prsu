@@ -58,30 +58,66 @@ const Menu = () => {
   );
 };
 
-export const Header = () => (
-  <header className="page-header">
-    <Menu />
-    <div>
-      <Link style={{ display: 'block', margin: '1rem 0' }} to="/">
-        <img className="logo" src={logo} />
-      </Link>{' '}
-    </div>
+export const Header = () => {
+  const [withLine, setWithLine] = useState(false);
 
-    <nav className="navigation">
-      <Link className="navigation-link" to="/samovysetreni">
-        Jak na to(.)(.)
-      </Link>{' '}
-      <br />{' '}
-      <Link className="navigation-link" to="/kalendar">
-        Kalendář
-      </Link>{' '}
-      <br />{' '}
-      <Link className="navigation-link" to="/codelatkdyz">
-        Co dělat, když...
-      </Link>{' '}
-    </nav>
-    <div className="installButton">
-      <InstallButton />
-    </div>
-  </header>
-);
+  return (
+    <>
+      <header className="page-header">
+        <Menu />
+        <div>
+          <Link style={{ display: 'block', margin: '1rem 0' }} to="/">
+            <img className="logo" src={logo} />
+          </Link>{' '}
+        </div>
+
+        <nav className="navigation">
+          <button
+            onClick={() => setWithLine(true)}
+            className="userChoosed"
+            disabled={withLine}
+          >
+            <Link
+              className="navigation-link"
+              to="/samovysetreni"
+              alt={withLine ? 'userChoosed' : 'navigation-link'}
+            >
+              Jak na to(.)(.)
+            </Link>{' '}
+          </button>
+          <br />
+          <button
+            onClick={() => setWithLine(true)}
+            className="userChoosed"
+            disabled={withLine}
+          >
+            <Link
+              className="navigation-link"
+              to="/kalendar"
+              alt={withLine ? 'userChoosed' : 'navigation-link'}
+            >
+              Kalendář
+            </Link>{' '}
+          </button>
+          <br />
+          <button
+            onClick={() => setWithLine(true)}
+            className="userChoosed"
+            disabled={withLine}
+          >
+            <Link
+              className="navigation-link"
+              to="/codelatkdyz"
+              alt={withLine ? 'userChoosed' : 'navigation-link'}
+            >
+              Co dělat, když...
+            </Link>{' '}
+          </button>
+        </nav>
+        <div className="installButton">
+          <InstallButton />
+        </div>
+      </header>
+    </>
+  );
+};
