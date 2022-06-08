@@ -6,6 +6,7 @@
 .manual__ifSomethingWrong {
   height: 350px;
   width: 400px;
+  margin-top: 0px;
 }
 .manual__title {
   font-size: 30px;
@@ -31,6 +32,5 @@
 @media (max-width: 650px) {
   .manual__image {
     min-width: 100vw;
-  }  
-
+  }
 }
