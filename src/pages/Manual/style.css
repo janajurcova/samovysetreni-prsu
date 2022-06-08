@@ -1,12 +1,18 @@
 .manual__container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-evenly;
+}
+.manual__ifSomethingWrong__images {
+  display: flex;
+  flex-direction: column;
 }
 .manual__ifSomethingWrong {
-  height: 350px;
-  width: 400px;
-  margin-top: 0px;
+  height: 70px;
+  width: 150px;
+  margin: 0px;
+  gap: 0;
 }
 .manual__title {
   font-size: 30px;
@@ -16,8 +22,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 570px;
-  height: 300px;
+  max-width: 300px;
+  height: 400px;
   background-color: white;
   margin-top: 60px;
 }
@@ -32,5 +38,12 @@
 @media (max-width: 650px) {
   .manual__image {
     min-width: 100vw;
+  }
+  .manual__container {
+    flex-direction: column;
+  }
+  .manual__ifSomethingWrong__images {
+    display: flex;
+    flex-direction: row;
   }
 }

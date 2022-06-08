@@ -3,6 +3,7 @@ import './style.css';
 import { Link, Outlet } from 'react-router-dom';
 import logo from '../../img/Blogo-transparent.png';
 import { useState } from 'react';
+import { InstallButton } from '../InstallButton';
 
 const Menu = () => {
   const [active, setActive] = useState(false);
@@ -79,5 +80,8 @@ export const Header = () => (
         Co dělat, když...
       </Link>{' '}
     </nav>
+    <div className="installButton">
+      <InstallButton />
+    </div>
   </header>
 );
