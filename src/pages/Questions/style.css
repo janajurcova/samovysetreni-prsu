@@ -20,7 +20,7 @@
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .accordion.active,
 .accordion:hover {
-  background-color: var(--cream);
+  background-color: white;
 }
 .accordion.active {
   margin: 0px;
@@ -29,7 +29,7 @@
 /* Style the accordion panel. Note: hidden by default */
 .panel {
   padding: 0 18px;
-  background-color: var(--cream);
+  background-color: white;
   display: none;
   overflow: hidden;
 }
