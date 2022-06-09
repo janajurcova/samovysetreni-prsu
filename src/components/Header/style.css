@@ -42,6 +42,7 @@ header {
   border: none;
   font-family: 'Quicksand', sans-serif;
   font-size: 20px;
+  margin-top: 100px;
 }
 .hamburger {
   display: none;
