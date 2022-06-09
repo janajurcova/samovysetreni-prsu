@@ -1,10 +1,12 @@
 @import url(http://weloveiconfonts.com/api/?family=fontawesome);
 
-
 /* ---------- CALENDAR ---------- */
 .calendar-container {
-  display:flex;
+  display: flex;
   flex-direction: row;
+  margin-top: 100px;
+  margin-left: 100px;
+  align-items: center;
 }
 
 .calendar-table {
@@ -12,7 +14,7 @@
   border-spacing: 0;
   margin: auto;
 }
- 
+
 .calendar-container__body {
   width: 510px;
   margin: 0 4rem;
@@ -36,60 +38,57 @@
   max-width: 40rem;
 }
 
- 
 .calendar {
   text-align: center;
   background-color: #f9f9f9;
   border-radius: 5px;
- 
 }
- 
+
 .calendar-header {
   display: flex;
   justify-content: space-around;
 }
- 
+
 .calendar-prev,
 .calendar-next {
-    display: block;
-    position: relative;
-    border: none;
-    background-color: transparent;
-    align-items: center;
-    font-size: 50px;
-} 
+  display: block;
+  position: relative;
+  border: none;
+  background-color: transparent;
+  align-items: center;
+  font-size: 50px;
+}
 
 .calendar thead {
   font-weight: 600;
   text-transform: uppercase;
 }
- 
+
 .calendar tbody {
   color: var(--pink);
 }
- 
+
 .calendar tbody td:hover {
   border: 2px solid var(--pink);
   display: inline-block;
 }
- 
+
 .calendar td {
   border: 2px solid transparent;
   border-radius: 50%;
   height: 3rem;
   line-height: 3rem;
   width: 3rem;
-  
 }
- 
+
 .calendar .other-month {
   color: #cbd1d2;
 }
- 
+
 .calendar .other-month:hover {
   border: 2px solid #cbd1d2;
 }
- 
+
 .current-day {
   background: var(--background-secondary);
 }
@@ -100,32 +99,32 @@
 }
 
 .year-noticeDay {
-    background: var(--blue);
-    color: #f9f9f9;
+  background: var(--blue);
+  color: #f9f9f9;
 }
 
 .event {
   cursor: pointer;
   position: relative;
 }
- 
+
 .event:after {
   background-color: #f9f9f9;
   border-radius: 50%;
   bottom: 0.5em;
   display: block;
-  content: "";
+  content: '';
   height: 0.5em;
   left: 50%;
   margin: -0.25em 0 0 -0.25em;
   position: absolute;
   width: 0.5em;
 }
- 
+
 .event.current-day:after {
   background: #f9f9f9;
 }
- 
+
 .btn-prev,
 .btn-next {
   border: 2px solid #cbd1d2;
@@ -139,27 +138,27 @@
   top: 50%;
   width: 2em;
 }
- 
+
 .btn-prev:hover,
 .btn-next:hover {
   background: #cbd1d2;
   color: #f9f9f9;
 }
- 
+
 .btn-prev {
   left: 6em;
 }
- 
+
 .btn-next {
   right: 6em;
 }
 
- /*-----------------Form------------ */
+/*-----------------Form------------ */
 
 form {
   padding: 2rem;
   background-color: #f9f9f9;
-  border-radius: 5px; 
+  border-radius: 5px;
   margin: 1rem;
 }
 
@@ -182,7 +181,6 @@ label {
   margin-bottom: 5px;
 }
 
-
 .btn-notice {
   border: 1px solid var(--pink);
   padding: 0.5rem 1rem;
@@ -196,7 +194,7 @@ label {
   background-color: var(--pink);
 }
 
-.btn-notice:disabled{
+.btn-notice:disabled {
   border: 1px solid gray;
   background-color: white;
   color: gray;
@@ -206,18 +204,17 @@ label {
   transform: scale(0.9);
 }
 
-input:not([type="radio"]):not([type="checkbox"]),
+input:not([type='radio']):not([type='checkbox']),
 select,
 textarea {
   border: 1px solid gray;
 }
 
-.field input:not([type="radio"]):not([type="checkbox"]),
+.field input:not([type='radio']):not([type='checkbox']),
 .field select,
 .field textarea {
   width: 100%;
 }
-
 
 select {
   background-color: white;
@@ -234,7 +231,7 @@ textarea {
   display: block;
 }
 
-.check input[type="checkbox"] {
+.check input[type='checkbox'] {
   margin-right: 0.5rem;
 }
 
@@ -279,26 +276,28 @@ textarea {
 }
 
 @media (max-width: 1150px) {
- .calendar-container {
-  display:flex;
-  flex-direction: column;
-} 
-.container-settings__month,
-.container-settings__year {
-  max-width: 510px;
-  margin: 1rem 0 0 4rem;
-}
+  .calendar-container {
+    display: flex;
+    flex-direction: column;
+    margin: unset;
+    align-items: unset;
+  }
+  .container-settings__month,
+  .container-settings__year {
+    max-width: 510px;
+    margin: 1rem 0 0 4rem;
+  }
 }
 
 @media (max-width: 650px) {
   .calendar-container__body {
-   width: 100vw;
-   margin: auto;
+    width: 100vw;
+    margin: auto;
   }
 
-.container-settings__month,
-.container-settings__year {
-  max-width: 100vw;
-  margin: 1rem 0 0 0;
-}
+  .container-settings__month,
+  .container-settings__year {
+    max-width: 100vw;
+    margin: 1rem 0 0 0;
+  }
 }

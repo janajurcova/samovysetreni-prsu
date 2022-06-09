@@ -1,6 +1,4 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
-
 
 /* CSS VARIABLES */
 
@@ -13,13 +11,13 @@
   --pink: #ee2a7b;
   --grey: #373739;
   --cream: #f9cdbd;
-  --blue: #7A89C2;
+  --blue: #7a89c2;
 }
 
 :root[theme='men'] {
   --background-primary: #f3f3f3;
-  --background-secondary: #7A89C250;
-  --main-color:  #7A89C2;
+  --background-secondary: #7a89c250;
+  --main-color: #7a89c2;
   --text: #373739;
 }
 
@@ -44,7 +42,8 @@ body {
 
 h1 {
   text-align: center;
-  color: var(--main-color)
+  color: var(--main-color);
+  margin-top: 50px;
 }
 
 h2 {
@@ -52,10 +51,9 @@ h2 {
   line-height: 1.25em;
   margin: 0.25em 0;
 }
- 
+
 h3 {
   font-size: 1.5em;
   line-height: 1em;
   margin: 0.33em 0;
 }
-

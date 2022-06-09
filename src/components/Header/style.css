@@ -8,6 +8,7 @@
   margin-right: auto;
   min-height: 100vh;
   border-right: 1px solid var(--text);
+  align-items: center;
 }
 
 .container {

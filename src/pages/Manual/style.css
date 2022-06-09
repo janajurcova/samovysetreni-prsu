@@ -1,9 +1,9 @@
 .manual__container {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-evenly;
   align-items: end;
+  margin-top: 150px;
 }
 .manual__ifSomethingWrong__images {
   display: flex;
@@ -43,6 +43,7 @@
   }
   .manual__container {
     flex-direction: column;
+    margin-top: auto;
   }
   .manual__ifSomethingWrong__images {
     display: flex;
