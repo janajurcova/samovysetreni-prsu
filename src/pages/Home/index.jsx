@@ -6,6 +6,9 @@ import icon1 from './img/Icons-flower.jpg'
 import icon2 from './img/Icons-cancer.jpg'
 import icon3 from './img/Icons-B.jpg'
 import bellis from './img/Bellis-logo-transparent.png'
+import { useContext } from "react";
+import { ThemeContext } from '../../index';
+
 
 export const Switcher = () => {
     return (<div className="theme-switch-wrapper">
@@ -17,12 +20,23 @@ export const Switcher = () => {
     </div>)
 }
 
+export const ThemeToggle = () => {
+    const { theme, setTheme } =useContext(ThemeContext);
+    const handleThemeToggle = () => {
+        setTheme(theme === "women" ? "men" : "women")
+    };
+    return <Switcher onChange={handleThemeToggle} checked={theme === "women"} />
+}
+
+
 
 export const Home = () => {
+    const { theme } = useContext(ThemeContext);
+
     return (
         <div className="home-page">
             <header className="home-header">
-                <Switcher />
+                <Switcher  />
                 <div className="home-header__motto">
                     <h1 className="home-header__title">Samovyšetření prsu</h1>
                     <h4 className="home-header__subtitle">"TOUCH ME IF YOU CAN"</h4>
@@ -64,9 +78,9 @@ export const Home = () => {
                     </div>
                    
                     <div className="bellis"> 
-                        <div ><a className="bellis-facebook" href="https://www.facebook.com/mybellisky?locale=cs_CZ"><i class="lab la-facebook"></i></a></div>
+                        <div ><a className="bellis-facebook" href="https://www.facebook.com/mybellisky?locale=cs_CZ"><i className="lab la-facebook"></i></a></div>
                         <div><img className="Bellis" src={bellis} /></div>
-                        <div className="bellis-info"><i class="las la-info-circle"></i></div>
+                        <div className="bellis-info"><i className="las la-info-circle"></i></div>
                     </div>
                 </div>
             </main>

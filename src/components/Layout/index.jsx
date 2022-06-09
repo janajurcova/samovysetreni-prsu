@@ -3,6 +3,8 @@ import { Header } from '../Header';
 import './style.css';
 import { Outlet } from 'react-router-dom';
 import { Footer } from '../Footer';
+import { ThemeContext } from '../../index';
+
 
 export const Layout = () => {
   return (

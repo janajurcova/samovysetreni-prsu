@@ -10,20 +10,14 @@ import './style.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { createContext, useState } from "react";
 
-export const ThemeContext = createContext(null);
+export const ThemeContext = createContext({});
 
 
 const App = () => {
-    const [theme, setTheme] = useState("men");
+  const [theme, setTheme] = useState("women");
 
-    const toggleTheme = () => {
-      setTheme((curr) => (curr === "women" ? "men" : "women"));
-    };
     return (
-      <ThemeContext.Provider value={{ theme, toggleTheme }}>
-        <div className="App" id={theme}>
-            <Switcher onChange={toggleTheme} checked={theme === "men"} />
-          </div>
+      <ThemeContext.Provider value={{ theme, setTheme }}>
       </ThemeContext.Provider>
     );
   }

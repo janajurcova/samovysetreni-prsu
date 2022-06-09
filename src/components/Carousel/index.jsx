@@ -43,7 +43,7 @@ export const Carousel = () => {
           aria-label="previous"
           disabled={activePicture === 0}
         >
-          <i class="las la-angle-left"></i>
+          <i className="las la-angle-left"></i>
         </button>
         <div className="carousel__media">
           <div className="carousel__images">
@@ -67,7 +67,7 @@ export const Carousel = () => {
           className="carousel__next"
           aria-label="next"
         >
-          <i class="las la-angle-right"></i>
+          <i className="las la-angle-right"></i>
         </button>
       </div>
     </>
