@@ -114,9 +114,9 @@ export const Header = () => {
             </Link>{' '}
           </button>
         </nav>
-        <div id="show" className="installButton">
+        {/* <div id="show" className="installButton">
           <InstallButton />
-        </div>
+        </div> */}
       </header>
     </>
   );

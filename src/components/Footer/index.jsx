@@ -5,9 +5,9 @@ export const Footer = () => {
   return (
     <>
       <div className="footer">
-        <div className="installButton">
+        {/* <div className="installButton">
           <InstallButton />
-        </div>
+        </div> */}
         <div className="bellis__footer">
           <small className="copyright">
             <p>Copyright &copy; </p>
