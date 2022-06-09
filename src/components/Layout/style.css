@@ -5,7 +5,7 @@
 
 .layout-cover {
   min-height: 100vh;
-  background-image: url(../../img/cover-opacity.jpg);
+  background-image: url(../../img/cover-opacity-layout.jpg);
   background-size: cover;
   flex: 1;
   width: 80%;
