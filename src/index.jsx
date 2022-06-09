@@ -11,28 +11,26 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { createContext, useState } from "react";
 
 
-export const ThemeContext = createContext({});
 
+export const ThemeContext = createContext(null);
 
 const App = () => {
-  const [theme, setTheme] = useState("women");
+  const [theme, setTheme] = useState("men");
+  
+  return (
+    <ThemeContext.Provider value={theme}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home setTheme={setTheme} />} />
+          <Route path="/" element={<Layout />}>
+            <Route path="samovysetreni" element={<Manual />} />
+            <Route path="kalendar" element={<Calendar />} />
+            <Route path="codelatkdyz" element={<Questions />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </ThemeContext.Provider>
+  );
+};
 
-    return (
-      <ThemeContext.Provider value={{ theme }}>
-      </ThemeContext.Provider>
-    );
-  }
-
-
-createRoot(document.querySelector('#app')).render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/" element={<Layout />}>
-        <Route path="samovysetreni" element={<Manual />} />
-        <Route path="kalendar" element={<Calendar />} />
-        <Route path="codelatkdyz" element={<Questions />} />
-      </Route>
-    </Routes>
-  </BrowserRouter>,
-);
+createRoot(document.querySelector("#app")).render(<App />);

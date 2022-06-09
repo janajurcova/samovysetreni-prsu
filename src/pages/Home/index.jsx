@@ -10,12 +10,12 @@ import bellis from './img/Bellis-logo-transparent.png';
 import { useContext } from 'react';
 import { ThemeContext } from '../../index';
 
-export const Switcher = () => {
+export const Switcher = ({ setTheme }) => {
   return (
     <div className="theme-switch-wrapper">
       <img className="gender" src={gender} />
       <label className="theme-switch" htmlFor="checkbox">
-        <input type="checkbox" id="checkbox" />
+        <input type="checkbox" id="checkbox" onChange={(event) => setTheme(event.target.value)} />
         <div className="slider round"></div>
       </label>
     </div>
@@ -41,12 +41,12 @@ export const ThemeToggle = () => {
   return <Switcher onChange={handleThemeToggle} checked={theme === 'women'} />;
 };
 
-export const Home = () => {
+export const Home = ({ setTheme }) => {
   const { theme } = useContext(ThemeContext);
   return (
     <div className="home-page">
       <header className="home-header">
-        <Switcher />
+              <Switcher setTheme={setTheme} />
         <div className="home-header__motto">
           <h1 className="home-header__title">Samovyšetření prsu</h1>
           <h4 className="home-header__subtitle">"TOUCH ME IF YOU CAN"</h4>
