@@ -1,94 +1,105 @@
 .home-page {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    flex-direction: column;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
 }
 
 .home-header {
-    display: flex;
-    flex-direction: row;
-    border-bottom: 1px solid;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid;
+  width: 100%;
 }
 
 .home-header__motto {
-    text-align: center;
-    flex-direction: column;
-    flex: 1; 
+  text-align: center;
+  flex-direction: column;
+  flex: 1;
 }
 .home-header__title {
-    margin: 0;
-    color: var(--text)
+  margin: 0;
+  color: var(--text);
 }
 
 .home-header__subtitle {
-    padding-left: 15rem;
-    margin: 1rem;
-    color: var(--pink);
+  padding-left: 15rem;
+  margin: 1rem;
+  color: var(--pink);
 }
 
 .homepage-main {
-    display: flex;
-     flex-direction: column;
-     background-image: url(../../img/cover-opacity.jpg);
-     background-size: cover;
-     height: 100vh;
-     align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../../img/cover-opacity.jpg);
+  background-size: cover;
+  height: 100vh;
+  align-items: center;
 }
 
 .homepage-main__body {
-     display: flex;
-     min-height: 70vh;
-     align-items: center;
-     justify-content: space-around;
+  display: flex;
+  min-height: 70vh;
+  align-items: center;
+  justify-content: space-around;
+}
 
- }
+.homepage-main__manual,
+.homepage-main__calendar,
+.homepage-main__questions {
+  text-align: center;
+}
 
- .homepage-main__manual,
- .homepage-main__calendar,
- .homepage-main__questions {
-     text-align: center;
- }
-
- .bellis {
+/* prolink s podtržením  */
+/* .navigation-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--text);
+  display: block;
+  margin-bottom: 2rem;
+}
+.userChoosed :hover {
+  text-decoration: underline 1px;
+}
+.userChoosed {
+  border: none;
+} */
+.bellis {
   display: flex;
   flex-direction: row;
   margin: 0 auto;
- }
-
- .bellis-info {
-   font-size: 30px;
-   color: white;
-   background-color: var(--pink);
-   border-radius: 50%;
-   margin-left: 5rem;
-
- }
- .bellis-facebook {
-   font-size: 30px;
-   color: white;
-   background-color: var(--pink);
-   border-radius: 50%;
-   margin-right: 5rem;
-   text-decoration: none;
- }
-
- img.icon1,
- img.icon2,
- img.icon3 {
-     border-radius: 50%;
-     width: calc(100% /3);    
- }
-
- img.gender {
-    height: 1rem;
-    margin: 3px;
 }
-  img.Bellis {
-    width: 15rem;
-  }
 
+.bellis-info {
+  font-size: 30px;
+  color: white;
+  background-color: var(--pink);
+  border-radius: 50%;
+  margin-left: 5rem;
+}
+.bellis-facebook {
+  font-size: 30px;
+  color: white;
+  background-color: var(--pink);
+  border-radius: 50%;
+  margin-right: 5rem;
+  text-decoration: none;
+}
+
+img.icon1,
+img.icon2,
+img.icon3 {
+  border-radius: 50%;
+  width: calc(100% / 3);
+}
+
+img.gender {
+  height: 1rem;
+  margin: 3px;
+}
+img.Bellis {
+  width: 15rem;
+}
 
 /* toggleSwitch */
 .theme-switch-wrapper {
@@ -100,7 +111,6 @@
   align-content: flex-end;
   width: 30px;
 }
-
 
 .theme-switch {
   display: inline-block;
@@ -136,7 +146,7 @@
 }
 
 input:checked + .slider {
-  background-color: #7A89C2;
+  background-color: #7a89c2;
 }
 
 input:checked + .slider:before {
@@ -152,39 +162,37 @@ input:checked + .slider:before {
 }
 
 @media (max-width: 650px) {
+  .home-page {
+    background-color: #f9f9f9;
+  }
+  .homepage-main {
+    background-image: none;
+    background-color: #f9f9f9;
+    flex-direction: column;
+    margin-top: 1rem;
+    height: 85vh;
+    justify-content: flex-start;
+  }
 
-    .home-page {
-      background-color: #f9f9f9;
+  .homepage-main__body {
+    flex-direction: column;
+  }
 
-    }
-    .homepage-main {
-        background-image: none;
-        background-color: #f9f9f9;
-        flex-direction: column;
-        margin-top: 1rem;
-        height: 85vh;
-        justify-content: flex-start;
-    }
+  .home-header__subtitle {
+    padding-left: 0;
+    font-size: small;
+  }
+  .home-header__title {
+    font-size: 23px;
+  }
 
-    .homepage-main__body {
-      flex-direction: column;
-    }
-
-    .home-header__subtitle {
-        padding-left: 0;
-        font-size: small;
-    }
-    .home-header__title {
-        font-size: 23px;
-    }
-
-    img.bellis {
-      max-width: 30vw;
-    }
-    .bellis-facebook {
-      margin-right: 0.5rem;
-    }
-    .bellis-info {
-      margin-left: 0.5rem;
-    }
+  img.bellis {
+    max-width: 30vw;
+  }
+  .bellis-facebook {
+    margin-right: 0.5rem;
+  }
+  .bellis-info {
+    margin-left: 0.5rem;
+  }
 }
