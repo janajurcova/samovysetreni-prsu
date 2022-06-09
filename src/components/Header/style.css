@@ -35,6 +35,14 @@ header {
   display: block;
   margin-bottom: 2rem;
 }
+.userChoosed :hover {
+  text-decoration: underline 1px;
+}
+.userChoosed {
+  border: none;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+}
 .hamburger {
   display: none;
 }
