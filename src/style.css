@@ -16,7 +16,7 @@
   --blue: #7A89C2;
 }
 
-:root[data-theme='men'] {
+:root[theme='men'] {
   --background-primary: #f3f3f3;
   --background-secondary: #7A89C250;
   --main-color:  #7A89C2;

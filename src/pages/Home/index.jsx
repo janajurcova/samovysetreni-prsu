@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.css';
+import '../../style.css';
 import { Link } from 'react-router-dom';
 import gender from './../../img/gender-icon.png'
 import icon1 from './img/Icons-flower.jpg'
@@ -20,19 +21,28 @@ export const Switcher = () => {
     </div>)
 }
 
+const theme = {
+    women: {
+        backgroundColor: "black",
+        color: "white",
+    },
+    men: {
+        backgroundColor: "blue",
+        color: "pink",
+    },
+}
+
 export const ThemeToggle = () => {
     const { theme, setTheme } =useContext(ThemeContext);
     const handleThemeToggle = () => {
-        setTheme(theme === "women" ? "men" : "women")
+        setTheme(theme) === "women" ? "men" : "women"
     };
     return <Switcher onChange={handleThemeToggle} checked={theme === "women"} />
 }
 
 
-
 export const Home = () => {
     const { theme } = useContext(ThemeContext);
-
     return (
         <div className="home-page">
             <header className="home-header">

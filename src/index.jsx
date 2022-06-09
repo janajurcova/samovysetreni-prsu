@@ -10,6 +10,7 @@ import './style.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { createContext, useState } from "react";
 
+
 export const ThemeContext = createContext({});
 
 
@@ -17,7 +18,7 @@ const App = () => {
   const [theme, setTheme] = useState("women");
 
     return (
-      <ThemeContext.Provider value={{ theme, setTheme }}>
+      <ThemeContext.Provider value={{ theme }}>
       </ThemeContext.Provider>
     );
   }
