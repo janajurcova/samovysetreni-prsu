@@ -25,14 +25,16 @@ export const InstallButton = () => {
 
   return (
     <>
-      <div className="downloadApp">Stáhnout jako</div>
-      <button
-        className="nav__button"
-        style={{ display: deferredPrompt ? 'inline' : 'none' }}
-        onClick={handleClick}
-      >
-        App
-      </button>
+      <div className="downloadApp">
+        Stáhnout jako
+        <button
+          className="nav__button"
+          style={{ display: deferredPrompt ? 'inline' : 'none' }}
+          onClick={handleClick}
+        >
+          App
+        </button>
+      </div>
     </>
   );
 };

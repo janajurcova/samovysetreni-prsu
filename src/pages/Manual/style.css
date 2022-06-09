@@ -52,6 +52,7 @@
 @media (max-width: 1150px) {
   .manual__image {
     max-width: 450px;
+    max-height: 300px;
   }
   .manual__carousel {
     max-width: 450px;
