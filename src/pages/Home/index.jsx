@@ -14,6 +14,7 @@ import bellisMen from './img/Bellis-logo-men.png';
 import { useContext } from 'react';
 import { ThemeContext } from '../../index';
 import { InstallButton } from '../../components/InstallButton';
+import { Footer } from '../../components/Footer';
 
 export const Switcher = ({ setTheme }) => {
   const theme = useContext(ThemeContext);
@@ -59,7 +60,7 @@ export const Home = ({ setTheme }) => {
                 style={{ display: 'block', margin: '1rem 0' }}
                 to="/samovysetreni"
               >
-                <img className="icon1" src={icon1} />
+                <img className="icon1" src={(theme === 'women' ? icon1 : icon4)} />
               </Link>{' '}
             </div>
             <div className="homepage-main__calendar">
@@ -68,7 +69,7 @@ export const Home = ({ setTheme }) => {
                 style={{ display: 'block', margin: '1rem 0' }}
                 to="/kalendar"
               >
-                <img className="icon2" src={icon2} />
+                <img className="icon2" src={(theme === 'women' ? icon2 : icon5)} />
               </Link>{' '}
             </div>
             <div className="homepage-main__questions">
@@ -77,7 +78,7 @@ export const Home = ({ setTheme }) => {
                 style={{ display: 'block', margin: '1rem 0' }}
                 to="/codelatkdyz"
               >
-                <img className="icon3" src={icon3} />
+                <img className="icon3" src={(theme === 'women' ? icon3 : icon6)} />
               </Link>{' '}
             </div>
           </div>
@@ -92,7 +93,7 @@ export const Home = ({ setTheme }) => {
               </a>
             </div>
             <div>
-              <img className="Bellis" src={bellis} />
+              <img className="Bellis" src={(theme === 'women' ? bellis : bellisMen)} />
             </div>
             <div className="bellis-info">
               <i className="las la-info-circle"></i>
@@ -103,6 +104,7 @@ export const Home = ({ setTheme }) => {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };
