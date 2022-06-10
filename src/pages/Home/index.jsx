@@ -47,6 +47,7 @@ export const theme = {
 };
 
 export const Home = ({ setTheme }) => {
+  const theme = useContext(ThemeContext);
   return (
     <div className="home-page">
       <header className="home-header">

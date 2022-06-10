@@ -25,7 +25,7 @@
 .home-header__subtitle {
   padding-left: 15rem;
   margin: 1rem;
-  color: var(--pink);
+  color: var(--main-color);
 }
 
 .homepage-main {
@@ -73,14 +73,14 @@
 .bellis-info {
   font-size: 30px;
   color: white;
-  background-color: var(--pink);
+  background-color: var(--main-color);
   border-radius: 50%;
   margin-left: 5rem;
 }
 .bellis-facebook {
   font-size: 30px;
   color: white;
-  background-color: var(--pink);
+  background-color: var(--main-color);
   border-radius: 50%;
   margin-right: 5rem;
   text-decoration: none;
@@ -146,7 +146,7 @@ img.Bellis {
 }
 
 input:checked + .slider {
-  background-color: #7a89c2;
+  background-color: var(--blue);
 }
 
 input:checked + .slider:before {

@@ -12,7 +12,7 @@ import { createContext, useState } from "react";
 
 
 
-export const ThemeContext = createContext();
+export const ThemeContext = createContext(null);
 
 const App = () => {
   const [theme, setTheme] = useState("men");
@@ -22,7 +22,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home setTheme={setTheme} />} />
-          <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Layout setTheme={setTheme}/>}>
             <Route path="samovysetreni" element={<Manual />} />
             <Route path="kalendar" element={<Calendar />} />
             <Route path="codelatkdyz" element={<Questions />} />
