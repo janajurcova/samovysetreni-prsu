@@ -14,7 +14,7 @@
   background-attachment: fixed;
 }
 .app[data-theme='men'] .layout-cover {
-  background-image: url(../../img/Cover-men-opacity.jpg);
+  background-image: url(../../img/Cover-men-opacity-layout.jpg);
 }
 
 .logo {

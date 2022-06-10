@@ -171,6 +171,9 @@ input:checked + .slider:before {
   margin-right: 10px;
 }
 @media (max-width: 650px) {
+  .app[data-theme='men'] .homepage-main {
+    background-image: none;
+  }
   .home-page {
     background-color: #f9f9f9;
   }

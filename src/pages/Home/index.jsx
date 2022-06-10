@@ -6,7 +6,11 @@ import gender from './../../img/gender-icon.png';
 import icon1 from './img/Icons-flower.jpg';
 import icon2 from './img/Icons-cancer.jpg';
 import icon3 from './img/Icons-B.jpg';
+import icon4 from './img/Icon-Men-flower.jpg';
+import icon5 from './img/Icon-Men-cancer.jpg';
+import icon6 from './img/Icon-Men-B.jpg';
 import bellis from './img/Bellis-logo-transparent.png';
+import bellisMen from './img/Bellis-logo-men.png';
 import { useContext } from 'react';
 import { ThemeContext } from '../../index';
 import { InstallButton } from '../../components/InstallButton';
@@ -20,6 +24,7 @@ export const Switcher = ({ setTheme }) => {
         <input
           type="checkbox"
           id="checkbox"
+          checked={theme === 'men'}
           onChange={() => {
             setTheme(theme === 'women' ? 'men' : 'women')}}
         />
