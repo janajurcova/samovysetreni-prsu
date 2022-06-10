@@ -29,7 +29,6 @@ export const Questions = () => {
       <h1>Co dělat, když...</h1>
       <div className="questions">
         <Question title="1 - Něco se ti nezdá">
-          <p>
             Navštiv svého gynekologa nebo praktického lékaře a požádej o
             doporučení na mamologii…Dej si pozor, aby šlo o akreditované
             centrum. - seznam akreditovaných mamocenter
@@ -38,11 +37,9 @@ export const Questions = () => {
                 <a href="https://www.mamo.cz/centra/">www.mamo.cz/centra</a>
               </li>
             </ul>
-          </p>
         </Question>
 
         <Question title="2 - Jsi zmatená z výsledků a nevíš co dál?">
-          <p>
             Využij “second opinion”. Máš nárok na názor dalšího odborníka. -
             seznam kompletních onko center - česká onko společnost
             <ul>
@@ -52,11 +49,9 @@ export const Questions = () => {
                 </a>
               </li>
             </ul>
-          </p>
         </Question>
 
         <Question title="3 - Špatné výsledky? To je nám líto, ale vše zvládneš!">
-          <p>
             Začátky bývají často náročnější, neboj se říct si o pomoc! -
             psychoonkologická pomoc
             <ul>
@@ -74,11 +69,9 @@ export const Questions = () => {
             situaci spojené s diagnózou onkologického onemocnění, tj. při
             zvládání stresu a emocí a řešení akutních psychických či vztahových
             problémů.
-          </p>
         </Question>
 
         <Question title="4 - Nejsi v tom sama. Nech si pomoct a mluv o tom.">
-          <p>
             {' '}
             - pacientské organizace - Bellis - mladé ženy s rakovinou prsu,
             Aliance žen s rakovinou prsu o.p.s., Avon linka za zdravá prsa
@@ -105,11 +98,9 @@ export const Questions = () => {
             onemocnění a prevence rakoviny prsu. Poradenství je anonymní a
             poskytují jej ženy, které zvládly náročnou léčbu této nemoci. Dotazy
             je možné zasílat i e-mailem na zazdravaprsa@breastcancer.cz{' '}
-          </p>
         </Question>
 
         <Question title="5 - Napiš si o knihu Nejsi na to sama - průvodce rakovinou prsu.">
-          <p>
             Autorkami jsou mladé ženy, které zažily to, co ty. V knize najdeš
             spoustu důležitých informací. - Nejsi na to sama - kniha
             <ul>
@@ -119,11 +110,9 @@ export const Questions = () => {
                 </a>
               </li>
             </ul>
-          </p>
         </Question>
 
         <Question title="6 - Řešíš ekonomickou situaci během léčby?">
-          <p>
             Nech si pomoci a poradit od odborníků z Amelie z.s. - socioekonom
             Amelie
             <ul>
@@ -131,7 +120,6 @@ export const Questions = () => {
                 <a href="https://www.amelie-zs.cz/">www.amelie-zs.cz</a>
               </li>
             </ul>
-          </p>
         </Question>
       </div>
     </main>
