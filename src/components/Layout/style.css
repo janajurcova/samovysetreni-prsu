@@ -36,10 +36,15 @@ header {
     flex-direction: column;
     min-width: 100%;
   }
+
   .layout-cover {
     background-image: none;
     background-color: var(--background-secondary);
     width: 100%;
+  }
+
+  .app[data-theme='men'] .layout-cover {
+    background-image: none;
   }
   .logo {
     height: 4rem;

@@ -74,7 +74,7 @@ header {
   .navigation-link {
     display: flex;
     flex-grow: initial;
-    background-color: var(--pink);
+    background-color: var(--main-color);
     font-size: 20px;
     color: white;
     gap: 0px;
@@ -97,7 +97,7 @@ header {
     padding: 0.5em 0;
     width: 100%;
     color: var(--text);
-    background-color: var(--pink);
+    background-color: var(--main-color);
     border-bottom: 1px solid white;
   }
   .hamburger {
