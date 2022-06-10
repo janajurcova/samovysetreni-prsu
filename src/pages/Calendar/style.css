@@ -47,6 +47,7 @@
 .calendar-header {
   display: flex;
   justify-content: space-around;
+  color: var(--main-color);
 }
 
 .calendar-prev,
@@ -57,6 +58,7 @@
   background-color: transparent;
   align-items: center;
   font-size: 50px;
+  color: var(--main-color);
 }
 
 .calendar thead {

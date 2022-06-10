@@ -38,7 +38,7 @@
 
 .carousel__title {
   font-size: 35px;
-  color: var(--pink);
+  color: var(--main-color);
 }
 .carousel__text__content {
   /* margin: 0px 5px 5px 5px; */

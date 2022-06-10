@@ -18,7 +18,7 @@
 }
 .manual__title {
   font-size: 30px;
-  color: #ee2a7b;
+  color: var(--main-color);
 }
 .manual__image {
   display: flex;
