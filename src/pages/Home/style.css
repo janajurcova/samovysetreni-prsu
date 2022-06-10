@@ -160,7 +160,12 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-
+.main__installButton {
+  display: none;
+}
+.installButton {
+  margin-right: 10px;
+}
 @media (max-width: 650px) {
   .home-page {
     background-color: #f9f9f9;
@@ -194,5 +199,11 @@ input:checked + .slider:before {
   }
   .bellis-info {
     margin-left: 0.5rem;
+  }
+  .main__installButton {
+    display: inline;
+  }
+  .installButton {
+    display: none;
   }
 }

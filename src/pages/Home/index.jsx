@@ -27,7 +27,6 @@ export const Switcher = ({ setTheme }) => {
   );
 };
 
-
 export const ThemeToggle = () => {
   const { theme, setTheme } = useContext(ThemeContext);
   const handleThemeToggle = () => {
@@ -37,14 +36,14 @@ export const ThemeToggle = () => {
 };
 
 export const theme = {
-    women: {
-        backgroundColor: 'black',
-        color: 'white',
-    },
-    men: {
-        backgroundColor: 'blue',
-        color: 'pink',
-    },
+  women: {
+    backgroundColor: 'black',
+    color: 'white',
+  },
+  men: {
+    backgroundColor: 'blue',
+    color: 'pink',
+  },
 };
 
 export const Home = ({ setTheme }) => {
@@ -56,7 +55,7 @@ export const Home = ({ setTheme }) => {
           <h1 className="home-header__title">Samovyšetření prsu</h1>
           <h4 className="home-header__subtitle">"TOUCH ME IF YOU CAN"</h4>
         </div>
-        <div>
+        <div className="installButton">
           <InstallButton />
         </div>
       </header>
@@ -107,6 +106,9 @@ export const Home = ({ setTheme }) => {
             <div className="bellis-info">
               <i className="las la-info-circle"></i>
             </div>
+          </div>
+          <div className="main__installButton">
+            <InstallButton />
           </div>
         </div>
       </main>
