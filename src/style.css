@@ -1,20 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
 /* CSS VARIABLES */
-
 :root {
-  --background-primary: #f3f3f3;
-  --background-secondary: #f9cdbd50;
-  --main-color: #ee2a7b;
-  --text: #373739;
-
   --pink: #ee2a7b;
   --grey: #373739;
   --cream: #f9cdbd;
   --blue: #7a89c2;
 }
 
-:root[theme='men'] {
+
+.app {
+  --background-primary: #f3f3f3;
+  --background-secondary: #f9cdbd50;
+  --main-color: #ee2a7b;
+  --text: #373739;
+}
+
+.app[data-theme='men'] {
   --background-primary: #f3f3f3;
   --background-secondary: #7a89c250;
   --main-color: #7a89c2;

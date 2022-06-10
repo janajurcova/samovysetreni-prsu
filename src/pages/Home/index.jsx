@@ -12,6 +12,7 @@ import { ThemeContext } from '../../index';
 import { InstallButton } from '../../components/InstallButton';
 
 export const Switcher = ({ setTheme }) => {
+  const theme = useContext(ThemeContext);
   return (
     <div className="theme-switch-wrapper">
       <img className="gender" src={gender} />
@@ -19,7 +20,8 @@ export const Switcher = ({ setTheme }) => {
         <input
           type="checkbox"
           id="checkbox"
-          onChange={(event) => setTheme(event.target.value)}
+          onChange={() => {
+            setTheme(theme === 'women' ? 'men' : 'women')}}
         />
         <div className="slider round"></div>
       </label>
@@ -27,24 +29,7 @@ export const Switcher = ({ setTheme }) => {
   );
 };
 
-export const ThemeToggle = () => {
-  const { theme, setTheme } = useContext(ThemeContext);
-  const handleThemeToggle = () => {
-    setTheme(theme) === 'women' ? 'men' : 'women';
-  };
-  return <Switcher onChange={handleThemeToggle} checked={theme === 'women'} />;
-};
 
-export const theme = {
-  women: {
-    backgroundColor: 'black',
-    color: 'white',
-  },
-  men: {
-    backgroundColor: 'blue',
-    color: 'pink',
-  },
-};
 
 export const Home = ({ setTheme }) => {
   const theme = useContext(ThemeContext);
