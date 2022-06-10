@@ -1,13 +1,12 @@
 .page-header {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding-left: 1rem;
   padding-right: 1rem;
   margin-left: auto;
   margin-right: auto;
   min-height: 100vh;
-  border-right: 1px solid var(--text);
   align-items: center;
 }
 
@@ -64,12 +63,6 @@ header {
     align-items: center;
     background-color: #f9f9f9;
   }
-  /* #show {
-    display: none;
-  } */
-  /* .downloadApp__header {
-    display: none;
-  } */
 
   .navigation {
     display: none;
@@ -125,24 +118,9 @@ header {
     transition-property: opacity, transform;
     transition-duration: 0.2s;
   }
-
-  /* .hamburger span:nth-child(1) {
-    transform: translateY(-250%);
-  } */
-
-  /* .hamburger span:nth-child(3) {
-    transform: translateY(250%);
-  }
-
-  .hamburger--otevrene span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger--otevrene span:nth-child(1) {
-    transform: rotate(45deg);
-  }
-
-  .hamburger--otevrene span:nth-child(3) {
-    transform: rotate(-45deg);
-  } */
 }
+/* @media (max-width: 1150px) {
+  .page-header {
+    position: sticky;
+  }
+} */

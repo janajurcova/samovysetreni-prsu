@@ -2,14 +2,13 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: center;
 }
 .nav__button {
   background-color: var(--pink);
   color: #fff;
-  width: 120px;
-  height: 30px;
-  border-radius: 2px;
+  width: 110px;
+  height: 45px;
+  border-radius: 15px;
   border-style: none;
 }
 @media (max-width: 519px) {
