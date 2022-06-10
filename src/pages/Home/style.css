@@ -37,6 +37,10 @@
   align-items: center;
 }
 
+.app[data-theme='men'] .homepage-main {
+  background-image: url(../../img/Cover-men-opacity.jpg);
+}
+
 .homepage-main__body {
   display: flex;
   min-height: 70vh;

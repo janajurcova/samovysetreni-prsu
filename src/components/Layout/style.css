@@ -13,6 +13,9 @@
   margin: 0 auto;
   background-attachment: fixed;
 }
+.app[data-theme='men'] .layout-cover {
+  background-image: url(../../img/Cover-men-opacity.jpg);
+}
 
 .logo {
   height: 5rem;
