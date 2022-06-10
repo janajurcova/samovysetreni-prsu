@@ -27,16 +27,6 @@ export const Switcher = ({ setTheme }) => {
   );
 };
 
-const theme = {
-  women: {
-    backgroundColor: 'black',
-    color: 'white',
-  },
-  men: {
-    backgroundColor: 'blue',
-    color: 'pink',
-  },
-};
 
 export const ThemeToggle = () => {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -46,8 +36,18 @@ export const ThemeToggle = () => {
   return <Switcher onChange={handleThemeToggle} checked={theme === 'women'} />;
 };
 
+export const theme = {
+    women: {
+        backgroundColor: 'black',
+        color: 'white',
+    },
+    men: {
+        backgroundColor: 'blue',
+        color: 'pink',
+    },
+};
+
 export const Home = ({ setTheme }) => {
-  const { theme } = useContext(ThemeContext);
   return (
     <div className="home-page">
       <header className="home-header">

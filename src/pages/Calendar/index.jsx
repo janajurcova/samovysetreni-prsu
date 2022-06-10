@@ -120,6 +120,7 @@ const FormMonth = ({ onChange }) => {
                         setCycle(on);
                     }}
                 />dnech</label>
+            <p>Nastav si své první vyšetření na 5-10 den menstruačního cyklu a periodu opakování nastav podle jeho délky.</p>
             <button className="btn-notice" type="submit" disabled={start === "" || cycle === ""}>Nastavit upozornění</button>
         </form>
     )
@@ -257,7 +258,7 @@ export const Calendar = () => {
                     </table>
                 </div>
                     <div className="container-legend">
-                        <h4 className="form-title__legend">Legenda:</h4>
+                    <h4 className="form-title__legend">Legenda:</h4>
                         <div>
                             <span className="container-legend__month"></span>Samovyšetření
                         </div>
