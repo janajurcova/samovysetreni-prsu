@@ -15,7 +15,7 @@ import { useContext } from 'react';
 import { ThemeContext } from '../../index';
 import { InstallButton } from '../../components/InstallButton';
 import { Footer } from '../../components/Footer';
-
+import { InfoPage } from '../InfoPage/InfoPage';
 export const Switcher = ({ setTheme }) => {
   const theme = useContext(ThemeContext);
   return (
@@ -27,14 +27,14 @@ export const Switcher = ({ setTheme }) => {
           id="checkbox"
           checked={theme === 'men'}
           onChange={() => {
-            setTheme(theme === 'women' ? 'men' : 'women')}}
+            setTheme(theme === 'women' ? 'men' : 'women');
+          }}
         />
         <div className="slider round"></div>
       </label>
     </div>
   );
 };
-
 
 export const Home = ({ setTheme }) => {
   const theme = useContext(ThemeContext);
@@ -59,7 +59,10 @@ export const Home = ({ setTheme }) => {
                 style={{ display: 'block', margin: '1rem 0' }}
                 to="/samovysetreni"
               >
-                <img className="icon1" src={(theme === 'women' ? icon1 : icon4)} />
+                <img
+                  className="icon1"
+                  src={theme === 'women' ? icon1 : icon4}
+                />
               </Link>{' '}
             </div>
             <div className="homepage-main__calendar">
@@ -68,7 +71,10 @@ export const Home = ({ setTheme }) => {
                 style={{ display: 'block', margin: '1rem 0' }}
                 to="/kalendar"
               >
-                <img className="icon2" src={(theme === 'women' ? icon2 : icon5)} />
+                <img
+                  className="icon2"
+                  src={theme === 'women' ? icon2 : icon5}
+                />
               </Link>{' '}
             </div>
             <div className="homepage-main__questions">
@@ -77,7 +83,10 @@ export const Home = ({ setTheme }) => {
                 style={{ display: 'block', margin: '1rem 0' }}
                 to="/codelatkdyz"
               >
-                <img className="icon3" src={(theme === 'women' ? icon3 : icon6)} />
+                <img
+                  className="icon3"
+                  src={theme === 'women' ? icon3 : icon6}
+                />
               </Link>{' '}
             </div>
           </div>
@@ -92,10 +101,15 @@ export const Home = ({ setTheme }) => {
               </a>
             </div>
             <div>
-              <img className="Bellis" src={(theme === 'women' ? bellis : bellisMen)} />
+              <img
+                className="Bellis"
+                src={theme === 'women' ? bellis : bellisMen}
+              />
             </div>
             <div className="bellis-info">
-              <i className="las la-info-circle"></i>
+              <Link to="/InfoPge">
+                <i className="las la-info-circle"></i>
+              </Link>
             </div>
           </div>
           <div className="main__installButton">

@@ -8,31 +8,30 @@ import { Home } from './pages/Home';
 import { Calendar } from './pages/Calendar';
 import './style.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { createContext, useState } from "react";
-
-
+import { createContext, useState } from 'react';
 
 export const ThemeContext = createContext(null);
 
 const App = () => {
-  const [theme, setTheme] = useState("women");
-  
+  const [theme, setTheme] = useState('women');
+
   return (
     <div className="app" data-theme={theme}>
-    <ThemeContext.Provider value={theme}>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home setTheme={setTheme} />} />
-          <Route path="/" element={<Layout />}>
-            <Route path="samovysetreni" element={<Manual />} />
-            <Route path="kalendar" element={<Calendar />} />
-            <Route path="codelatkdyz" element={<Questions />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </ThemeContext.Provider>
+      <ThemeContext.Provider value={theme}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home setTheme={setTheme} />} />
+            <Route path="/" element={<Layout />}>
+              <Route path="samovysetreni" element={<Manual />} />
+              <Route path="kalendar" element={<Calendar />} />
+              <Route path="codelatkdyz" element={<Questions />} />
+              <Route path="Info" element={<InfoPage />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </ThemeContext.Provider>
     </div>
   );
 };
 
-createRoot(document.querySelector("#app")).render(<App />);
+createRoot(document.querySelector('#app')).render(<App />);
