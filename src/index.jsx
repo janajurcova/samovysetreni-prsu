@@ -9,7 +9,7 @@ import { Calendar } from './pages/Calendar';
 import './style.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { createContext, useState } from 'react';
-import { InfoPage } from './pages/InfoPage/InfoPage';
+import { InfoPage } from './pages/InfoPage';
 
 export const ThemeContext = createContext(null);
 
