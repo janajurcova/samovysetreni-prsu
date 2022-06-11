@@ -21,7 +21,7 @@ const images = [
     title: 'Použij 3 prsty',
     img: image3,
 
-    text: 'Každá máme jiný tvar prsu, proto je ideální vyšetřovat se vleže vždy třemi prsty, levou rukou pravý prs a naopak. Sáhni si na prsa třemi prsty naplocho a třemi krouživými pohyby vyšetřuj - nejprve povrchově, poté postupně přidávej tlak (na jednom místě celkem tři kroušžky). Nezapomeň, že takto je potřeba vyšetřit hrudník od podprsenky do podpaží, až ke klíční kosti. Snaž se nevynechat ani kousek. Po vyšetření celé plochy hrudníku nezapomeň na vyšetření podpaží.',
+    text: 'Každá máme jiný tvar prsu, proto je ideální vyšetřovat se vleže vždy třemi prsty, levou rukou pravý prs a naopak. Sáhni si na prsa třemi prsty naplocho a třemi krouživými pohyby vyšetřuj - nejprve povrchově, poté postupně přidávej tlak (na jednom místě celkem tři kroužky). Nezapomeň, že takto je potřeba vyšetřit hrudník od podprsenky do podpaží, až ke klíční kosti. Snaž se nevynechat ani kousek. Po vyšetření celé plochy hrudníku nezapomeň na vyšetření podpaží.',
   },
   {
     title: 'Za měsíc znovu',
@@ -47,10 +47,6 @@ export const Carousel = () => {
         </button>
         <div className="carousel__media">
           <div className="carousel__images">
-            {/* <img
-              className="carousel__number"
-              src={images[activePicture].number}
-            /> */}
             <img className="carousel__image" src={images[activePicture].img} />
           </div>
           <div className="carousel__text__content">

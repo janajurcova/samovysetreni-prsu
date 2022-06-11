@@ -64,7 +64,8 @@
     height: 120px;
     object-fit: cover;
   }
-  .carousel__previous .carousel__next {
+  .carousel__previous,
+  .carousel__next {
     width: 28px;
     font-size: 26px;
     height: 515px;
