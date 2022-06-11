@@ -51,7 +51,7 @@
 
 @media (max-width: 650px) {
   .carousel {
-    max-width: 90vw;
+    max-width: 130vw;
     margin: 0;
     max-height: 500px;
   }
@@ -63,5 +63,14 @@
     width: 210px;
     height: 120px;
     object-fit: cover;
+  }
+  .carousel__previous .carousel__next {
+    width: 28px;
+    font-size: 26px;
+    height: 515px;
+  }
+  .carousel__media {
+    height: 515px;
+    width: 255px;
   }
 }
