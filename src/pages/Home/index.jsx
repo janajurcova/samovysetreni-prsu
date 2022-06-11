@@ -15,7 +15,6 @@ import { useContext } from 'react';
 import { ThemeContext } from '../../index';
 import { InstallButton } from '../../components/InstallButton';
 import { Footer } from '../../components/Footer';
-import { InfoPage } from '../InfoPage/InfoPage';
 export const Switcher = ({ setTheme }) => {
   const theme = useContext(ThemeContext);
   return (

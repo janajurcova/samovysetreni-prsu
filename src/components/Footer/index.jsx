@@ -1,6 +1,5 @@
 import React from 'react';
 import './style.css';
-import { InstallButton } from '../InstallButton';
 export const Footer = () => {
   return (
     <>
