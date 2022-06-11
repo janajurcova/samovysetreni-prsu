@@ -206,13 +206,13 @@ export const Calendar = () => {
     const handleChangeMonth = (data) => {
         setDateMonth(data)
         cleanNotifications("samovysetreni")
-        // setNotification("Samovyšetření prsu", "Je čas se vyšeřit: \"Touch me if you can\"", "samovysetreni", dayjs().add(5, "second"))
+        setNotification("Samovyšetření prsu", "Je čas se vyšeřit: \"Touch me if you can\"", "samovysetreni", dayjs().add(5, "second"))
         
-        generateMonthRecurrent(data)
-            .next(12)
-            .forEach(dateTime =>
-                setNotification("Samovyšetření prsu", "Je čas se vyšeřit: \"Touch me if you can\"", "samovysetreni", dateTime.hour(9))
-            )
+        // generateMonthRecurrent(data)
+        //     .next(12)
+        //     .forEach(dateTime =>
+        //         setNotification("Samovyšetření prsu", "Je čas se vyšeřit: \"Touch me if you can\"", "samovysetreni", dateTime.hour(9))
+        //     )
         localStorage.setItem("samovysetreni", JSON.stringify(data))
     }
 

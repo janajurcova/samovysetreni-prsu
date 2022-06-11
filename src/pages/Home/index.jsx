@@ -36,7 +36,6 @@ export const Switcher = ({ setTheme }) => {
 };
 
 
-
 export const Home = ({ setTheme }) => {
   const theme = useContext(ThemeContext);
   return (
