@@ -1,0 +1,25 @@
+.info__body {
+  background-image: url(../../img/cover-opacity.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+.info__container {
+  background-color: #f3f3f3;
+  font-family: 'Quicksand', sans-serif;
+}
+.info__title {
+  font-size: 80px;
+  color: var(--main-color);
+}
+.info__subTitle {
+  font-size: 50px;
+  color: var(--text);
+}
+.infro__paragraph {
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--text);
+}
+.info__link {
+  color: var(--main-color);
+}

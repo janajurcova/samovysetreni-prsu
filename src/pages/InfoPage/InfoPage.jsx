@@ -1,8 +1,16 @@
 import React from 'react';
 import './style.css';
+import { Link, Outlet } from 'react-router-dom';
+import logo from '../../img/Blogo-transparent.png';
+import logoMen from '../../img/BlogoMen.png';
 
 export const InfoPage = () => {
   <body className="info__body">
+    <div>
+      <Link style={{ display: 'block', margin: '1rem 0' }} to="/">
+        <img className="logo" src={theme === 'women' ? logo : logoMen} />
+      </Link>{' '}
+    </div>
     <header className="info__container">
       <h1 className="info__title">Aplikace Samovyšetření prsu</h1>
       <h2 className="infro__subTitle">"Touch me if you can"</h2>

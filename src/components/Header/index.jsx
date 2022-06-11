@@ -4,10 +4,8 @@ import { Link, Outlet } from 'react-router-dom';
 import logo from '../../img/Blogo-transparent.png';
 import logoMen from '../../img/BlogoMen.png';
 import { useState } from 'react';
-import { InstallButton } from '../InstallButton';
 import { useContext } from 'react';
 import { ThemeContext } from '../../index';
-
 
 const Menu = () => {
   const [active, setActive] = useState(false);
@@ -71,7 +69,7 @@ export const Header = () => {
         <Menu />
         <div>
           <Link style={{ display: 'block', margin: '1rem 0' }} to="/">
-            <img className="logo" src={(theme === 'women' ? logo : logoMen)} />
+            <img className="logo" src={theme === 'women' ? logo : logoMen} />
           </Link>{' '}
         </div>
 
