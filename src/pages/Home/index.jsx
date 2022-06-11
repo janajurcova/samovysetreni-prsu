@@ -108,8 +108,7 @@ export const Home = ({ setTheme }) => {
               />
             </div>
             <div className="bellis-info">
-              <Link
-                style={{ display: 'block', margin: '1rem 0' }}
+              <Link 
                 to="/info"
               >
                 <i className="las la-info-circle"></i>
