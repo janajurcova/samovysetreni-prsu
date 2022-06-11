@@ -15,6 +15,8 @@ import { useContext } from 'react';
 import { ThemeContext } from '../../index';
 import { InstallButton } from '../../components/InstallButton';
 import { Footer } from '../../components/Footer';
+
+
 export const Switcher = ({ setTheme }) => {
   const theme = useContext(ThemeContext);
   return (
@@ -111,7 +113,7 @@ export const Home = ({ setTheme }) => {
                 to="/InfoPage"
               >
                 <i className="las la-info-circle"></i>
-              </Link>
+              </Link>{' '}
             </div>
           </div>
           <div className="main__installButton">

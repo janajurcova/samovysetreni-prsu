@@ -6,13 +6,7 @@ import logoMen from '../../img/BlogoMen.png';
 
 export const InfoPage = () => {
   return (
-    <>
-      <body className="info__body">
-        <div>
-          <Link style={{ display: 'block', margin: '1rem 0' }} to="/">
-            <img className="logo" src={theme === 'women' ? logo : logoMen} />
-          </Link>{' '}
-        </div>
+      <div className="info__body">  
         <header className="info__container">
           <h1 className="info__title">Aplikace Samovyšetření prsu</h1>
           <h2 className="infro__subTitle">"Touch me if you can"</h2>
@@ -81,7 +75,6 @@ export const InfoPage = () => {
             měla růžová ikona aplice objevit na ploše Tvého mobilu.
           </p>
         </section>
-      </body>
-    </>
+      </div>
   );
 };

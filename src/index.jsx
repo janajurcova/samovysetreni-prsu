@@ -6,10 +6,11 @@ import { Questions } from './pages/Questions';
 import { Manual } from './pages/Manual';
 import { Home } from './pages/Home';
 import { Calendar } from './pages/Calendar';
+import { InfoPage } from './pages/InfoPage';
 import './style.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { createContext, useState } from 'react';
-import { InfoPage } from './pages/InfoPage';
+
 
 export const ThemeContext = createContext(null);
 
@@ -21,12 +22,12 @@ const App = () => {
       <ThemeContext.Provider value={theme}>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Home setTheme={setTheme} />} />
+            <Route path="/" element={<Home setTheme={setTheme} />} /> 
             <Route path="/" element={<Layout />}>
               <Route path="samovysetreni" element={<Manual />} />
               <Route path="kalendar" element={<Calendar />} />
               <Route path="codelatkdyz" element={<Questions />} />
-              <Route path="Info" element={<InfoPage />} />
+              <Route path="info" element={<InfoPage />} />
             </Route>
           </Routes>
         </BrowserRouter>
