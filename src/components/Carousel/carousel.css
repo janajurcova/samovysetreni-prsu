@@ -1,7 +1,7 @@
 .carousel {
   display: flex;
   max-width: 500px;
-  height: 475px;
+  height: 515px;
   background-color: white;
   margin: auto;
 }
@@ -53,7 +53,6 @@
   .carousel {
     max-width: 130vw;
     margin: 0;
-    max-height: 500px;
   }
   .carousel__images {
     max-width: 90vw;
