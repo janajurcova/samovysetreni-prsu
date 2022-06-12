@@ -13,12 +13,6 @@
       "sizes": "401x401",
       "type": "image/png",
       "purpose": "any"
-    },
-    {
-      "src": "favicon.ico",
-      "type": "image/x-con",
-      "sizes": "16x16",
-      "purpose": "any"
     }
   ]
 }
