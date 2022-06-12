@@ -70,7 +70,8 @@ export const InfoPage = () => {
             přesah a smysl, a k onkologické prevenci máme obě osobní důvody.
             Naše aplikace není dokonalá, proto měj prosím pochopení. O stažení
             aplikace do mobilu si prosím přečti níže. Více o nás a projektu si
-            můžete přečíst zde (link). Iveta & Jana
+            můžete přečíst <a className="info__link" href="https://ivetaziz.github.io/o-projektu/">zde</a>.
+            Iveta & Jana
           </p>
         </section>
         <section className="info__section">
@@ -82,7 +83,9 @@ export const InfoPage = () => {
             Naši stránku si otevři v prohlížeči Safari. 2. Dole v navigační
             listě klikni na obrázek čtverečku se šipkou nahoru (hned uprostřed).
             3. V nabídce dole vyber "Přidat na plochu" a potvrď. Teď už by se Ti
-            měla růžová ikona aplice objevit na ploše Tvého mobilu.
+            měla růžová ikona aplice objevit na ploše Tvého mobilu. Na posílání
+            notifikací si ale budeš muset zatím počkat. Safari námi zvolenou technologii 
+            ještě nepodporuje.
           </p>
         </section>
       </div>
