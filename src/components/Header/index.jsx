@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import { Link, Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import logo from '../../img/Blogo-transparent.png';
 import logoMen from '../../img/BlogoMen.png';
 import { useState } from 'react';
@@ -13,7 +13,7 @@ const Menu = () => {
   return (
     <>
       <button
-        className={active ? 'hamburger hamburger--otevrene' : 'hamburger'}
+        className={active ? 'hamburger hamburger--open' : 'hamburger'}
         aria-label="menu"
         onClick={() => {
           if (active) {
@@ -60,9 +60,11 @@ const Menu = () => {
   );
 };
 
+
 export const Header = () => {
   const [withLine, setWithLine] = useState(false);
   const theme = useContext(ThemeContext);
+
   return (
     <>
       <header className="page-header">

@@ -54,20 +54,6 @@
   text-align: center;
 }
 
-/* prolink s podtržením  */
-/* .navigation-link {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: var(--text);
-  display: block;
-  margin-bottom: 2rem;
-}
-.userChoosed :hover {
-  text-decoration: underline 1px;
-}
-.userChoosed {
-  border: none;
-} */
 .bellis {
   display: flex;
   flex-direction: row;
@@ -172,6 +158,8 @@ input:checked + .slider:before {
 .installButton {
   margin-right: 10px;
 }
+
+
 @media (max-width: 650px) {
   .app[data-theme='men'] .homepage-main {
     background-image: none;

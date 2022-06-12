@@ -1,7 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { Layout } from './components/Layout';
-import { Header } from './components/Header';
 import { Questions } from './pages/Questions';
 import { Manual } from './pages/Manual';
 import { Home } from './pages/Home';

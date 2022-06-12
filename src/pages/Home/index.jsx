@@ -19,6 +19,7 @@ import { Footer } from '../../components/Footer';
 
 export const Switcher = ({ setTheme }) => {
   const theme = useContext(ThemeContext);
+
   return (
     <div className="theme-switch-wrapper">
       <img className="gender" src={gender} />
@@ -37,8 +38,10 @@ export const Switcher = ({ setTheme }) => {
   );
 };
 
+
 export const Home = ({ setTheme }) => {
   const theme = useContext(ThemeContext);
+
   return (
     <div className="home-page">
       <header className="home-header">

@@ -30,6 +30,8 @@ const images = [
     text: 'Je všechno v pořádku? Raduj se a mrkni na sebe zase za měsíc. Znpokojilo Tě něco? Nepanikař a zajdi za svým gynekologem. Každý útvar neznamená nutně nádor.',
   },
 ];
+
+
 export const Carousel = () => {
   const [activePicture, setActivePicture] = useState(0);
   return (

@@ -47,7 +47,7 @@ header {
 .hamburger {
   display: none;
 }
-.hamburger--otevrene {
+.hamburger--open {
   display: none;
 }
 #show {

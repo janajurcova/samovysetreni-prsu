@@ -50,6 +50,7 @@
     flex-direction: column;
   }
 }
+
 @media (max-width: 1150px) {
   .manual__image {
     max-width: 450px;
