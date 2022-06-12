@@ -36,7 +36,7 @@
 }
 @media (max-width: 650px) {
   .info__container {
-    width: 35Opx;
+    width: 350px;
     margin: 20px 0px 20px 20px;
   }
   .info__section {
@@ -45,6 +45,6 @@
 }
 @media (max-width: 1150px) {
   .info__container {
-    width: 500px;
+    max-width: 500px;
   }
 }

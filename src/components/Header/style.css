@@ -120,8 +120,3 @@ header {
     transition-duration: 0.2s;
   }
 }
-/* @media (max-width: 1150px) {
-  .page-header {
-    position: sticky;
-  }
-} */
