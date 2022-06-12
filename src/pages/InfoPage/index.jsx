@@ -11,13 +11,22 @@ export const InfoPage = () => {
         <div className="info__header">
           <h1 className="info__title">Aplikace Samovyšetření prsu</h1>
           <h2 className="info__subTitle">"Touch me if you can"</h2>
+
+          <p className="info__paragraph__header">
+            vznikla pod záštitou Bellis
+            <a className="info__link" href="https://www.bellisky.cz/">
+              {' '}
+              www.bellisky.cz
+            </a>
+            , mladé ženy s rakovinou prsu během Digitální akademie Czechitas
+            2022{' '}
+            <a className="info__link" href="https://www.czechitas.cz/">
+              {' '}
+              ww.czechitas.cz
+            </a>
+            .
+          </p>
         </div>
-        <p className="info__paragraph">
-          vznikla pod záštitou Bellis
-          <a className="info__link" href="https://www.bellisky.cz/"></a>, mladé
-          ženy s rakovinou prsu během Digitální akademie Czechitas 2022{' '}
-          <a className="info__link" href="https://www.czechitas.cz/"></a>.
-        </p>
         <section className="info__section">
           <h2 className="info__subTitle">Účel Aplikace</h2>
           <p className="info__paragraph">
