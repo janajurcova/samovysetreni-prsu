@@ -64,7 +64,7 @@
   font-size: 30px;
   color: white;
   background-color: var(--main-color);
-  border-radius: 50%;
+  border-radius: 30%;
   margin-left: 5rem;
   text-decoration: none;
 }
@@ -73,7 +73,7 @@
   font-size: 30px;
   color: white;
   background-color: var(--main-color);
-  border-radius: 50%;
+  border-radius: 30%;
   margin-right: 5rem;
   text-decoration: none;
 }

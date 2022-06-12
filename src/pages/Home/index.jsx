@@ -110,12 +110,14 @@ export const Home = ({ setTheme }) => {
                 src={theme === 'women' ? bellis : bellisMen}
               />
             </div>
-            <div className="bellis-info">
+            <div>
+            <a className="bellis-info">
               <Link
                 to="/info"
               >
                 <i className="las la-info-circle" style={{ textDecoration: 'none', color: 'white' }}></i>
               </Link>{' '}
+              </a>
             </div>
           </div>
           <div className="main__installButton">

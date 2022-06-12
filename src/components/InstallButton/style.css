@@ -17,5 +17,6 @@
   }
   .downloadApp {
     align-items: unset;
+    margin-top: 1rem;
   }
 }

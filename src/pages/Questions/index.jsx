@@ -25,7 +25,7 @@ const Question = ({ title, children }) => {
 
 export const Questions = () => {
   return (
-    <main className="questions-main" style={{ padding: '1rem' }}>
+    <main className="questions-main" >
       <h1>Co dělat, když...</h1>
       <div className="questions">
         <Question title="1 - Něco se ti nezdá">
