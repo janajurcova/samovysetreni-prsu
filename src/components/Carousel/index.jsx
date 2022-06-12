@@ -4,36 +4,45 @@ import image1 from './img/Carousel1.png';
 import image2 from './img/Carousel2.png';
 import image3 from './img/Carousel3.png';
 import image4 from './img/Carousel4.png';
+import { useContext } from 'react';
+import { ThemeContext } from '../../index';
+
 
 const images = [
   {
     title: 'Vyšetřuj se pravidelně',
     img: image1,
 
-    text: 'Vyšetřuj se každý měsíc. Vyšetřuj se sama. Proč? Protože Ty sama znáš svá prsa nejlépe. Kdy vyšetřovat? Ideálně 5. - 10. den menstruačního cyklu. Pokud menstruaci nemáš, stanov si jeden stejný den v měsíci.',
+    text1: 'Vyšetřuj se každý měsíc. Vyšetřuj se sama. Proč? Protože Ty sama znáš svá prsa nejlépe. Kdy vyšetřovat? Ideálně 5. - 10. den menstruačního cyklu. Pokud menstruaci nemáš, stanov si jeden stejný den v měsíci.',
+    text2: 'Pomoz ji s vyšetřením, ale jen pokud bude sama chtít. Zhruba ve 30% případů si změn všimne první partner, ale ona se zná stejně nejlépe. Pokud by ji tvá pomoc potěšila, zeptej se, na které datum si máš nastavit upozornění. Ber to jako každoměsíční rituál, který si spolu užijete.'
   },
   {
     title: 'Začni u zrcadla',
     img: image2,
-    text: 'Podívej se na svá prsa v zrcadle. Zvedni ruce nad hlavu a prohlídni si je. Všímej si změny velikosti, tvaru prsu a tvaru bradavky, výtoku z bradavky nebo změny kůže na prsu.',
+
+    text1: 'Podívej se na svá prsa v zrcadle. Zvedni ruce nad hlavu a prohlídni si je. Všímej si změny velikosti, tvaru prsu a tvaru bradavky, výtoku z bradavky nebo změny kůže na prsu.',
+    text2: 'První se na její prsa podívej a všímej si změn velikosti, tvaru prsu, bradavky nebo změny barvy kůže. Nejlíp se změny pozorují, když zvedne ruce nad hlavu.'
   },
   {
     title: 'Použij 3 prsty',
     img: image3,
 
-    text: 'Každá máme jiný tvar prsu, proto je ideální vyšetřovat se vleže vždy třemi prsty, levou rukou pravý prs a naopak. Sáhni si na prsa třemi prsty naplocho a třemi krouživými pohyby vyšetřuj - nejprve povrchově, poté postupně přidávej tlak (na jednom místě celkem tři kroužky). Nezapomeň, že takto je potřeba vyšetřit hrudník od podprsenky do podpaží, až ke klíční kosti. Snaž se nevynechat ani kousek. Po vyšetření celé plochy hrudníku nezapomeň na vyšetření podpaží.',
+    text1: 'Každá máme jiný tvar prsu, proto je ideální vyšetřovat se vleže vždy třemi prsty, levou rukou pravý prs a naopak. Sáhni si na prsa třemi prsty naplocho a třemi krouživými pohyby vyšetřuj - nejprve povrchově, poté postupně přidávej tlak (na jednom místě celkem tři kroužky). Nezapomeň, že takto je potřeba vyšetřit hrudník od podprsenky do podpaží, až ke klíční kosti. Snaž se nevynechat ani kousek. Po vyšetření celé plochy hrudníku nezapomeň na vyšetření podpaží.',
+    text2: 'Vyšetření samotné je nejlepší vleže pomocí tří prstů. Zkus to třemi krouživými pohyby - vyšetřuj nejprve povrchově, poté postupně přidávej tlak (na jednom místě celkem tři kroužky). Nezapomeň, že takto je potřeba vyšetřit hrudník od podprsenky do podpaží, až ke klíční kosti. Po vyšetření celé plochy hrudníku nezapomeň na vyšetření podpaží.'
   },
   {
     title: 'Za měsíc znovu',
     img: image4,
 
-    text: 'Je všechno v pořádku? Raduj se a mrkni na sebe zase za měsíc. Znpokojilo Tě něco? Nepanikař a zajdi za svým gynekologem. Každý útvar neznamená nutně nádor.',
+    text1: 'Je všechno v pořádku? Raduj se a mrkni na sebe zase za měsíc. Znpokojilo Tě něco? Nepanikař a zajdi za svým gynekologem. Každý útvar neznamená nutně nádor.',
+    text2: 'Je všechno v pořádku? Radujte se a oslavte to společně. Je to totiž vždycky skvělá zpráva. Pokud by tě cokoli znepokojilo nepanikař, ale doprovoď ji ke gynekologovi a buď s ní.'
   },
 ];
 
 
 export const Carousel = () => {
   const [activePicture, setActivePicture] = useState(0);
+  const theme = useContext(ThemeContext);
   return (
     <>
       <div className="carousel">
@@ -53,7 +62,7 @@ export const Carousel = () => {
           </div>
           <div className="carousel__text__content">
             <div className="carousel__title">{images[activePicture].title}</div>
-            <div className="carousel__text">{images[activePicture].text}</div>
+            <div className="carousel__text">{theme === 'women' ? images[activePicture].text1 : images[activePicture].text2}</div>
           </div>
         </div>
         <button
