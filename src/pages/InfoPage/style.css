@@ -36,10 +36,15 @@
 }
 @media (max-width: 650px) {
   .info__container {
-    width: unset;
+    width: 300px;
     margin: 20px 0px 20px 20px;
   }
   .info__section {
     align-items: center;
+  }
+}
+@media (max-width: 1150px) {
+  .info__container {
+    max-width: 500px;
   }
 }
