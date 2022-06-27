@@ -62,7 +62,7 @@
 
 .bellis-info {
   font-size: 30px;
-  padding: 0 2px 0 2px;
+  padding: 0 3px 0 3px;
   color: white;
   background-color: var(--main-color);
   border-radius: 50%;
@@ -72,7 +72,7 @@
 
 .bellis-facebook {
   font-size: 30px;
-  padding: 0 2px 0 2px;
+  padding: 0 3px 0 3px;
   color: white;
   background-color: var(--main-color);
   border-radius: 50%;

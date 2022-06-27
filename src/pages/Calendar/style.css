@@ -5,7 +5,6 @@
   display: flex;
   flex-direction: row;
   margin-top: 100px;
-  margin-left: 100px;
   align-items: center;
 }
 
@@ -35,13 +34,14 @@
 
 .container-settings__month,
 .container-settings__year {
-  max-width: 40rem;
+  max-width: 30rem;
 }
 
 .calendar {
   text-align: center;
   background-color: #f9f9f9;
   border-radius: 5px;
+  padding-bottom: 2rem;
 }
 
 .calendar-header {
@@ -288,6 +288,9 @@ textarea {
   .container-settings__year {
     max-width: 510px;
     margin: 1rem 0 0 4rem;
+  }
+    form {
+    margin: 0;
   }
 }
 

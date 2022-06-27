@@ -8,6 +8,7 @@
   margin-right: auto;
   min-height: 100vh;
   align-items: center;
+  background-color: var(--background-primary);
 }
 
 .container {
@@ -43,6 +44,7 @@ header {
   font-family: 'Quicksand', sans-serif;
   font-size: 20px;
   margin-top: 100px;
+  background-color: var(--background-primary);
 }
 .hamburger {
   display: none;
