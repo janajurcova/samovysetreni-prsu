@@ -15,9 +15,9 @@ export const Layout = () => {
         <Header />
         <main className="layout-cover">
           <Outlet />
-        </main>
-      </div>
-      <Footer />
+          <Footer />
+        </main>   
+      </div>  
     </>
   );
 };

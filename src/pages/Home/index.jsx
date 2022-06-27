@@ -123,9 +123,9 @@ export const Home = ({ setTheme }) => {
           <div className="main__installButton">
             <InstallButton />
           </div>
+          <Footer />
         </div>
       </main>
-      <Footer />
     </div>
   );
 };
