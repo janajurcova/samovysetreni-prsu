@@ -227,11 +227,10 @@ export const Calendar = () => {
         setMonth(month.add(delta, "month"))
     }
 
-
     return (
         <div className="calendar-container">
             <div className="calendar-container__body">
-                <h1>Kalendář</h1>
+                <h1>Kalendář {month.format("YYYY")}</h1>
                 <div className="calendar">
                     <header className="calendar-header">
 
