@@ -228,6 +228,7 @@ export const Calendar = () => {
     }
 
     return (
+        <main style={{ padding: '1rem' }}>
         <div className="calendar-container">
             <div className="calendar-container__body">
                 <h1>Kalendář {month.format("YYYY")}</h1>
@@ -281,6 +282,6 @@ export const Calendar = () => {
                 </div>
                 </div>
             </div>
-        
+        </main>
     );
 };

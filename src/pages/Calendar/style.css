@@ -4,8 +4,9 @@
 .calendar-container {
   display: flex;
   flex-direction: row;
-  margin-top: 100px;
+  margin-top: 120px;
   align-items: center;
+  justify-content: space-evenly;
 }
 
 .calendar-table {
@@ -284,11 +285,17 @@ textarea {
     margin: unset;
     align-items: unset;
   }
+
+  .manual__container {
+    margin: auto;
+  }
+
   .container-settings__month,
   .container-settings__year {
     max-width: 510px;
     margin: 1rem 0 0 4rem;
   }
+  
     form {
     margin: 0;
   }
