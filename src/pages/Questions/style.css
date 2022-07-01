@@ -32,6 +32,8 @@
   background-color: white;
   display: none;
   overflow: hidden;
+  padding-bottom: 1.5rem;
+  padding-top: 0.5rem;
 }
 .panel.active {
   display: block;
@@ -49,6 +51,10 @@
 
 li {
   list-style-type: none;
+}
+
+ul {
+  margin-bottom: 0;
 }
 
 .questions a {
