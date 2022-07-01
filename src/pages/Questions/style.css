@@ -60,8 +60,17 @@ li {
   margin-top: 120px;
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 650px) {
   .questions-main {
-    margin: auto;
+    margin: 0;
+  }
+  .questions {
+    margin: 0;
+  }
+  .accordion {
+    width: 100vW;
+  }
+  .panel.active {
+    width: 100vw;
   }
 }

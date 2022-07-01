@@ -6,7 +6,7 @@ import pozor2 from './img/pozor-pink2.png';
 
 export const Manual = () => {
   return (
-    <main style={{ padding: '1rem' }}>
+    <main style={{ paddingTop: '1rem' }}>
       <div className="manual__container">
         <div className="manual__carousel">
           <h1>Jak na to (.)(.)</h1>

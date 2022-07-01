@@ -228,7 +228,7 @@ export const Calendar = () => {
     }
 
     return (
-        <main style={{ padding: '1rem' }}>
+        <main style={{ paddingTop: '1rem' }}>
         <div className="calendar-container">
             <div className="calendar-container__body">
                 <h1>Kalendář {month.format("YYYY")}</h1>
