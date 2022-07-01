@@ -313,3 +313,9 @@ textarea {
     margin: 1rem 0 0 0;
   }
 }
+
+@media (max-width: 1150px) {
+  .calendar-container {
+    align-items: center;
+  } 
+}
