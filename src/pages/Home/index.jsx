@@ -58,7 +58,7 @@ export const Home = ({ setTheme }) => {
         <div className="homepage-main">
           <div className="homepage-main__body">
             <div className="homepage-main__manual">
-              <label>Jak na to (.)(.)</label>
+              <a>Jak na to (.)(.)</a>
               <Link
                 style={{ display: 'block', margin: '1rem 0' }}
                 to="/samovysetreni"
@@ -70,7 +70,7 @@ export const Home = ({ setTheme }) => {
               </Link>{' '}
             </div>
             <div className="homepage-main__calendar">
-              <label>Kalendář</label>
+              <a>Kalendář</a>
               <Link
                 style={{ display: 'block', margin: '1rem 0' }}
                 to="/kalendar"
@@ -82,7 +82,7 @@ export const Home = ({ setTheme }) => {
               </Link>{' '}
             </div>
             <div className="homepage-main__questions">
-              <label>Co dělat, když...</label>
+              <a>Co dělat, když...</a>
               <Link
                 style={{ display: 'block', margin: '1rem 0' }}
                 to="/codelatkdyz"

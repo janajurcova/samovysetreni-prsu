@@ -34,7 +34,7 @@ header {
   text-transform: uppercase;
   color: var(--text);
   display: block;
-  margin-bottom: 2rem;
+  margin: 0.5rem;
 }
 .userChoosed :hover {
   text-decoration: underline 1px;

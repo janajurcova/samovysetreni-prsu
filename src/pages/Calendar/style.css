@@ -318,4 +318,8 @@ textarea {
   .calendar-container {
     align-items: center;
   } 
+  .container-settings__month,
+  .container-settings__year {
+    margin: 1rem 0 0 0;
+  }
 }
