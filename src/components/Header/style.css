@@ -84,19 +84,20 @@ header {
   .navigation-bar {
     position: absolute;
     top: 0;
-    margin-top: 100px;
+    margin-top: 96px;
     left: 0;
     flex-direction: column;
     width: 100%;
     justify-content: center;
     align-items: center;
     z-index: 100;
+    padding: 0;
   }
   .navigation-bar > li {
     display: flex;
     justify-content: space-around;
     margin: 0;
-    padding: 0.5em 0;
+    padding: 1em 0;
     width: 100%;
     color: var(--text);
     background-color: var(--main-color);
