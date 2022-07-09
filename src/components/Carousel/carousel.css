@@ -67,7 +67,7 @@
   .carousel__next {
     font-size: 30px;
     height: 500px;
-    padding: 0;   
+    padding: 4px;   
   }
   .carousel__media {
     max-height: 400px;
