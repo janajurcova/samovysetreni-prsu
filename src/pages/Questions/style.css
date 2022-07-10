@@ -54,7 +54,8 @@ li {
 }
 
 ul {
-  margin-bottom: 0;
+  margin-bottom: 10px;
+  font-style: italic;
 }
 
 .questions a {

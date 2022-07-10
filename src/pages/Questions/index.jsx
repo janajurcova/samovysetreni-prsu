@@ -1,6 +1,10 @@
 import React from 'react';
 import './style.css';
 import { useState } from 'react';
+import { useContext } from 'react';
+import { ThemeContext } from '../../index';
+
+
 
 const Question = ({ title, children }) => {
   const [open, setOpen] = useState(false);
@@ -23,16 +27,19 @@ const Question = ({ title, children }) => {
   );
 };
 
+
+
 export const Questions = () => {
+  const theme = useContext(ThemeContext);
   return (
     <main style={{ paddingTop: '1rem' }}>
     <div className="questions-main" >
       <h1>Co dělat, když...</h1>
       <div className="questions">
-        <Question title="1 - Něco se ti nezdá">
-            Navštiv svého gynekologa nebo praktického lékaře a požádej o
-            doporučení na mamologii…Dej si pozor, aby šlo o akreditované
-            centrum. - seznam akreditovaných mamocenter
+          <Question title={theme === 'women' ? '1 - Něco se ti nezdá': '1 - Něco se vám nezdá'}>
+            {theme === 'women' 
+            ? 'Navštiv svého gynekologa nebo praktického lékaře a požádej o doporučení na mamologii. Dej si pozor, aby šlo o akreditované centrum. Seznam akreditovaných mamocenter:' 
+            : 'Doprovoď ji ke gynekologovi nebo praktickému lékaři a požádejte o doporučení na mamologii. Dejte si pozor, aby šlo o akreditované centrum. Seznam akreditovaných mamocenter:'}
             <ul>
               <li>
                 <a href="https://www.mamo.cz/centra/">www.mamo.cz/centra</a>
@@ -40,9 +47,10 @@ export const Questions = () => {
             </ul>
         </Question>
 
-        <Question title="2 - Jsi zmatená z výsledků a nevíš co dál?">
-            Využij “second opinion”. Máš nárok na názor dalšího odborníka. -
-            seznam kompletních onko center - česká onko společnost
+          <Question title={theme === 'women' ? '2 - Jsi zmatená z výsledků a nevíš co dál?' : '2 - Už máte výsledky, ale oceníte názor dalšího lékaře?'}>
+            {theme === 'women'
+              ? 'Využij tzv. “second opinion”. Máš nárok na názor dalšího odborníka. Seznam kompletních onko center - česká onko společnost'
+              : 'Můžete využít tzv. “second opinion”, jde o názor dalšího odborníka. Seznam kompletních onko center - česká onko společnost'}
             <ul>
               <li>
                 <a href="https://www.linkos.cz/lekar-a-multidisciplinarni-tym/narodni-onkologicka-sit/prehled-komplexnich-onkologickych-center-cr/">
@@ -52,9 +60,10 @@ export const Questions = () => {
             </ul>
         </Question>
 
-        <Question title="3 - Špatné výsledky? To je nám líto, ale vše zvládneš!">
-            Začátky bývají často náročnější, neboj se říct si o pomoc! -
-            psychoonkologická pomoc
+          <Question title={theme === 'women' ? '3 - Špatné výsledky? To je nám líto, ale vše zvládneš!' : '3 - Špatné výsledky? To je nám líto, ale vše spolu zvládnete!'}>
+            {theme === 'women'
+              ? 'Začátky bývají často náročnější, neboj se říct si o pomoc! Psychoonkologická pomoc:'
+              : 'Začátky bývají často náročnější, neboj se říct si o pomoc! Pro ni i pro sebe. Psychoonkologická pomoc:'}
             <ul>
               <li>
                 {' '}
@@ -63,16 +72,13 @@ export const Questions = () => {
                 </a>
               </li>
             </ul>
-            Pomohl by ti onkopsycholog na telefonu? Zavolej na Avon linku za
-            zdravá prsa. - psychologická poradna Avon linka Linka (na čísle 800
-            546 546) nabízí i psychologické poradenství, pro které je vyhrazena
-            středa od 16 do 18 hodin. Je zaměřeno na pomoc v náročné životní
-            situaci spojené s diagnózou onkologického onemocnění, tj. při
-            zvládání stresu a emocí a řešení akutních psychických či vztahových
-            problémů.
+
+            {theme === 'women'
+              ? 'Pomohl by ti onkopsycholog na telefonu? Zavolej na Avon linku za zdravá prsa. Psychologická poradna Avon linka - Linka (na čísle 800 546 546) - nabízí i psychologické poradenství, pro které je vyhrazena středa od 16 do 18 hodin. Je zaměřeno na pomoc v náročné životní situaci spojené s diagnózou onkologického onemocnění, tj. při zvládání stresu a emocí a řešení akutních psychických či vztahových probémů.'
+              : 'Pomohl by jí onkopsycholog na telefonu? Řekni jí o Avon lince za zdravá prsa. Psychologická poradna Avon linka - Linka (na čísle 800 546 546) - nabízí i psychologické poradenství, pro které je vyhrazena středa od 16 do 18 hodin. Je zaměřeno na pomoc v náročné životní situaci spojené s diagnózou onkologického onemocnění, tj. při zvládání stresu a emocí a řešení akutních psychických či vztahových probémů.'}
         </Question>
 
-        <Question title="4 - Nejsi v tom sama. Nech si pomoct a mluv o tom.">
+          <Question title={theme === 'women' ? '4 - Nejsi v tom sama. Nech si pomoct a mluv o tom.' : '4 - Nejste v tom sami. Mluvte o tom a nechte si pomoct.'}>
             {' '}
             - pacientské organizace - Bellis - mladé ženy s rakovinou prsu,
             Aliance žen s rakovinou prsu o.p.s., Avon linka za zdravá prsa
@@ -101,9 +107,10 @@ export const Questions = () => {
             je možné zasílat i e-mailem na zazdravaprsa@breastcancer.cz{' '}
         </Question>
 
-        <Question title="5 - Napiš si o knihu Nejsi na to sama - průvodce rakovinou prsu.">
-            Autorkami jsou mladé ženy, které zažily to, co ty. V knize najdeš
-            spoustu důležitých informací. - Nejsi na to sama - kniha
+          <Question title={theme === 'women' ? '5 - Napiš si o knihu Nejsi na to sama - průvodce rakovinou prsu.' : '5 - Řekni jí, ať si napíše o knihu Nejsi na to sama - průvodce rakovinou prsu.'}>
+            {theme === 'women'
+              ? 'Autorkami jsou mladé ženy, které zažily to, co ty. V knize najdeš spoustu důležitých informací. - Nejsi na to sama - kniha'
+              : 'Autorkami jsou mladé ženy, které zažily to, čím právě prochází tvá žena. V knize najde spoustu důležitých informací. - Nejsi na to sama - kniha'}
             <ul>
               <li>
                 <a href="https://www.bellisky.cz/projekty-a-akce/kniha-nejsi-na-to-sama-pruvodce-rakovinou-prsu/">
@@ -113,9 +120,10 @@ export const Questions = () => {
             </ul>
         </Question>
 
-        <Question title="6 - Řešíš ekonomickou situaci během léčby?">
-            Nech si pomoci a poradit od odborníků z Amelie z.s. - socioekonom
-            Amelie
+          <Question title={theme === 'women' ? '6 - Řešíš ekonomickou situaci během léčby?' : '6 - Řešíte ekonomickou situaci během léčby?'}>
+            {theme === 'women'
+              ? 'Nech si pomoci a poradit od odborníků z Amelie z.s. - socioekonom Amelie'
+              : 'Nechte si pomoci a poradit od odborníků z Amelie z.s. - socioekonom Amelie'}
             <ul>
               <li>
                 <a href="https://www.amelie-zs.cz/">www.amelie-zs.cz</a>
