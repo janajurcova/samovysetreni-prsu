@@ -94,7 +94,8 @@ const FormMonth = ({ onChange }) => {
     const [cycle, setCycle] = useState("")
     const handleSubmit = (event) => {
         event.preventDefault();
-        onChange({ start, cycle })
+        onChange({ start, cycle });
+        alert('Nastavení vašeho samovyšetření (.)(.) bylo uloženo 🥳.');
     };
 
     return (
@@ -132,7 +133,8 @@ const FormYear = ({ onChange }) => {
     const [cycle, setCycle] = useState("")
     const handleSubmit = (event) => {
         event.preventDefault();
-        onChange({ start, cycle })
+        onChange({ start, cycle });
+        alert('Nastavení vašeho diagnostického vyšetření (.)(.) bylo uloženo 🥳.');
     };
 
     return (
