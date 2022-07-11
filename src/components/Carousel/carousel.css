@@ -12,6 +12,7 @@
   background-color: white;
   border: none;
   font-size: 35px;
+  color: var(--text);
 }
 
 .carousel__media {

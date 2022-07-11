@@ -107,6 +107,7 @@ header {
     display: block;
     position: relative;
     border: none;
+    color: var(--text);
     background-color: transparent;
     align-items: center;
     font-size: 50px;
