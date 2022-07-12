@@ -3,9 +3,10 @@ import './style.css';
 import dayjs from 'dayjs';
 import dayjscs from 'dayjs/locale/cs';
 import { useState } from 'react';
-import dayjsRecur from 'dayjs-recur'
+import dayjsRecur from 'dayjs-recur';
 dayjs.extend(dayjsRecur)
 dayjs.locale('cs')
+
 
 /**
  * Naplánuje zobrazení notifikace.

@@ -15,6 +15,7 @@ import { useContext } from 'react';
 import { ThemeContext } from '../../index';
 import { InstallButton } from '../../components/InstallButton';
 import { Footer } from '../../components/Footer';
+import { Splashscreen } from '../../components/Splashscreen';
 
 
 export const Switcher = ({ setTheme }) => {
@@ -44,6 +45,7 @@ export const Home = ({ setTheme }) => {
 
   return (
     <div className="home-page">
+      <Splashscreen />
       <header className="home-header">
         <Switcher setTheme={setTheme} />
         <div className="home-header__motto">

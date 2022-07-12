@@ -301,7 +301,6 @@ textarea {
   }
 }
 
-
 @media (max-width: 650px) {
   .calendar-container__body {
     width: 100vw;
