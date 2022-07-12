@@ -54,3 +54,18 @@
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
 }
+
+@media (max-width: 1150px){
+    .splashImg {
+        margin-top: 50%;
+        width: 500px;
+    }
+}
+
+
+@media (max-width: 650px) {
+     .splashImg {
+        margin-top: 100%;
+        width: 320px;
+    }
+}

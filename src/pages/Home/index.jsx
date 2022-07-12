@@ -45,7 +45,7 @@ export const Home = ({ setTheme }) => {
 
   return (
     <div className="home-page">
-      <Splashscreen />
+     <Splashscreen />
       <header className="home-header">
         <Switcher setTheme={setTheme} />
         <div className="home-header__motto">

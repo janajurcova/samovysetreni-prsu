@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './style.css';
-import SplashImg from './intro_1.png'
+import SplashImg from './cover_withText.png'
 
 document.addEventListener('DOMContentLoaded', (e) => {
     document.getElementById("splashBg").classList.add("active");
