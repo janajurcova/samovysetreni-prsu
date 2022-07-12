@@ -34,7 +34,7 @@
     max-width: 80%;
 }
 .splashImg{
-    margin-top: 25%;
+    margin-top: 35%;
     width: 700px;
 
 }
@@ -65,7 +65,7 @@
 
 @media (max-width: 650px) {
      .splashImg {
-        margin-top: 100%;
-        width: 320px;
+        margin-top: 70%;
+        width: 340px;
     }
 }
