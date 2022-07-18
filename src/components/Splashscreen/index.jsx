@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Component } from 'react';
 import './style.css';
-import SplashImg from './cover_withText.png'
+import SplashImg from './cover_withText.png';
+import { BlinkingCursorTextBuilder } from 'react-animated-text-builders';
 
 document.addEventListener('DOMContentLoaded', (e) => {
     document.getElementById("splashBg").classList.add("active");

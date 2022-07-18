@@ -89,6 +89,7 @@ const Week = ({ firstday, month, recurrenceMonth, recurrenceYear }) => {
     )
 };
 
+
 /*-----------formulář zadání dat pro Samovyšetření----- */
 const FormMonth = ({ onChange }) => {
     const [start, setStart] = useState("");
@@ -96,8 +97,14 @@ const FormMonth = ({ onChange }) => {
     const handleSubmit = (event) => {
         event.preventDefault();
         onChange({ start, cycle });
-        alert('Nastavení vašeho samovyšetření (.)(.) bylo uloženo 🥳.');
+        // alert('Nastavení vašeho samovyšetření (.)(.) bylo uloženo 🥳.');
     };
+    function myFunction() {
+        var x = document.getElementById("snackbar");
+        x.className = "show";
+        setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+        console.log("funguju");
+    }
 
     return (
         <form onSubmit={handleSubmit}>
@@ -123,7 +130,8 @@ const FormMonth = ({ onChange }) => {
                     }}
                 />dnech</label>
             <p>Nastav si své první vyšetření na 5-10 den menstruačního cyklu a periodu opakování nastav podle jeho délky.</p>
-            <button className="btn-notice" type="submit" disabled={start === "" || cycle === ""}>Nastavit upozornění</button>
+            <button onClick={myFunction} className="btn-notice" type="submit" disabled={start === "" || cycle === ""}>Nastavit upozornění</button>
+            <div id="snackbar">Nastavení vašeho samovyšetření (.)(.) bylo uloženo 🥳.</div>
         </form>
     )
 };
