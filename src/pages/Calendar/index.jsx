@@ -93,18 +93,18 @@ const Week = ({ firstday, month, recurrenceMonth, recurrenceYear }) => {
 /*-----------formulář zadání dat pro Samovyšetření----- */
 const FormMonth = ({ onChange }) => {
     const [start, setStart] = useState("");
-    const [cycle, setCycle] = useState("")
+    const [cycle, setCycle] = useState("");
+    const [showSnackbar, setShowSnackbar] = useState(false);
+    const show = () => {
+        setShowSnackbar(true);
+        setTimeout(() => {
+            setShowSnackbar(false);
+        }, 5000);
+    };
     const handleSubmit = (event) => {
         event.preventDefault();
         onChange({ start, cycle });
-        // alert('Nastavení vašeho samovyšetření (.)(.) bylo uloženo 🥳.');
     };
-    function myFunction() {
-        var x = document.getElementById("snackbar");
-        x.className = "show";
-        setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
-        console.log("funguju");
-    }
 
     return (
         <form onSubmit={handleSubmit}>
@@ -130,8 +130,20 @@ const FormMonth = ({ onChange }) => {
                     }}
                 />dnech</label>
             <p>Nastav si své první vyšetření na 5-10 den menstruačního cyklu a periodu opakování nastav podle jeho délky.</p>
-            <button onClick={myFunction} className="btn-notice" type="submit" disabled={start === "" || cycle === ""}>Nastavit upozornění</button>
-            <div id="snackbar">Nastavení vašeho samovyšetření (.)(.) bylo uloženo 🥳.</div>
+            <button onClick={show} className="btn-notice" type="submit" disabled={start === "" || cycle === ""}>Nastavit upozornění</button>
+            <div
+                className="snackbar"
+                id={showSnackbar ? "show" : "hide"}
+                style={{
+                    backgroundColor: "var(--pink)",
+                    color: "white",
+                }}
+            >
+                <div className="symbol">
+                    <h1>&#x2713;</h1>
+                </div>
+                <div className="message">Nastavení samovyšetření(.)(.) proběhlo úspěšně</div>
+            </div>
         </form>
     )
 };
@@ -140,11 +152,24 @@ const FormMonth = ({ onChange }) => {
 const FormYear = ({ onChange }) => {
     const [start, setStart] = useState("");
     const [cycle, setCycle] = useState("")
+    const [showSnackbar, setShowSnackbar] = useState(false);
+    const show = () => {
+        setShowSnackbar(true);
+        setTimeout(() => {
+            setShowSnackbar(false);
+        }, 5000);
+    };
     const handleSubmit = (event) => {
         event.preventDefault();
         onChange({ start, cycle });
-        alert('Nastavení vašeho diagnostického vyšetření (.)(.) bylo uloženo 🥳.');
+        // alert('Nastavení vašeho diagnostického vyšetření (.)(.) bylo uloženo 🥳.');
     };
+    // function myFunction() {
+    //     var x = document.getElementById("snackbar");
+    //     x.className = "show";
+    //     setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+    //     console.log("funguju");
+    // }
 
     return (
         <form onSubmit={handleSubmit}>
@@ -168,7 +193,20 @@ const FormYear = ({ onChange }) => {
                         setCycle(on);
                     }}
                 />měsících</label>
-            <button className="btn-notice" type="submit" disabled={start === "" || cycle === ""}>Nastavit upozornění</button>
+            <button onClick={show} className="btn-notice" type="submit" disabled={start === "" || cycle === ""}>Nastavit upozornění</button>
+            <div
+                className="snackbar"
+                id={showSnackbar ? "show" : "hide"}
+                style={{
+                    backgroundColor: "var(--pink)",
+                    color: "white",
+                }}
+            >
+                <div className="symbol">
+                    <h1>&#x2713;</h1>
+                </div>
+                <div className="message">Nastavení vyšetření(.)(.) proběhlo úspěšně</div>
+            </div>
         </form>
     )
 }
