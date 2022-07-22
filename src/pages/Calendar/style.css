@@ -357,3 +357,24 @@ textarea {
     opacity: 0;
   }
 }
+
+@media (max-width: 650px) {
+  .calendar-container__body {
+    width: 100vw;
+    margin: auto;
+  }
+  .container-settings__month,
+  .container-settings__year {
+    max-width: 100vw;
+    margin: 1rem 0 0 0;
+  }
+}
+@media (max-width: 1150px) {
+  .calendar-container {
+    align-items: center;
+  } 
+  .container-settings__month,
+  .container-settings__year {
+    margin: 1rem 0 0 0;
+  }
+}
